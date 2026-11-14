@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Orbit pieces: candidate sheet</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--board:#E7EBE4;--frame:#fff;--ink:#14241E;--ink2:#46564F;--line:#C3CCC1;--green:#0F5C45;--soft:#D5E4DA;--red:#C2105A;--amber:#F2B200}
+*{box-sizing:border-box}body{margin:0;background:var(--board);color:var(--ink);font:16px/1.5 'Atkinson Hyperlegible',system-ui,sans-serif;padding:40px 32px 60px}
+h1{font:800 34px/1.1 Figtree,system-ui,sans-serif;letter-spacing:-.03em;margin:0 0 6px}p.s{margin:0 0 28px;color:var(--ink2);max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px}
+.cell{background:var(--frame);border:1px solid var(--line);height:150px;display:grid;place-items:center;position:relative}
+.cell small{position:absolute;left:12px;bottom:9px;color:var(--ink2);font-size:13px}.cell b{position:absolute;right:12px;top:9px;font:700 13px Figtree;color:var(--green)}
+.p{background:var(--frame);border:1px solid var(--line);box-shadow:0 10px 20px -12px rgba(20,36,30,.55);font:700 15px Figtree,sans-serif;color:var(--ink)}
+.pay{background:var(--green);color:#fff;border:0;padding:12px 22px;border-radius:99px}
+.tog{width:56px;height:32px;border-radius:99px;background:var(--green);position:relative;border:0}.tog i{position:absolute;right:4px;top:4px;width:24px;height:24px;border-radius:50%;background:#fff}
+.step{padding:12px 16px;border-radius:12px;width:150px}.step em{font:400 13px 'Atkinson Hyperlegible';font-style:normal;color:var(--ink2);display:block;margin-bottom:8px}.bar{height:6px;background:var(--line);border-radius:9px;display:flex;gap:3px;background:none}.bar span{flex:1;border-radius:9px;background:var(--line)}.bar .on{background:var(--green)}
+.field{padding:10px 14px;border-radius:10px;width:170px;display:flex;align-items:center;gap:10px;font:600 14px 'Atkinson Hyperlegible';letter-spacing:.06em}.chip{width:26px;height:18px;border-radius:4px;background:var(--soft);border:1px solid var(--green)}.caret{width:2px;height:16px;background:var(--green);margin-left:-6px}
+.tick{width:52px;height:52px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+.stars{padding:11px 16px;border-radius:12px;color:var(--amber);font-size:20px;letter-spacing:3px}
+.card{width:96px;height:62px;border-radius:9px;background:var(--green);position:relative;border:0;transform:rotate(-8deg)}.card:before{content:"";position:absolute;left:10px;top:12px;width:20px;height:15px;border-radius:3px;background:var(--amber)}.card:after{content:"";position:absolute;left:10px;right:34px;bottom:11px;height:5px;border-radius:3px;background:rgba(255,255,255,.55)}
+.chk{padding:11px 16px;border-radius:10px;display:flex;gap:10px;align-items:center;font:600 14px 'Atkinson Hyperlegible'}.chk i{width:20px;height:20px;border-radius:5px;background:var(--green);display:grid;place-items:center}
+.toast{padding:10px 16px;border-radius:10px;display:flex;gap:10px;align-items:center;font:600 14px 'Atkinson Hyperlegible'}.toast i{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.seg{display:flex;border-radius:10px;overflow:hidden;font:700 13px Figtree}.seg span{padding:9px 14px}.seg .on{background:var(--ink);color:#fff}
+.price{padding:10px 16px;border-radius:10px 4px 4px 10px;position:relative;width:150px}.sk{height:7px;border-radius:9px;background:var(--line);margin:6px 0}.sk.s{width:55%}.sk.g{background:var(--green);width:38%}
+.slider{width:170px;height:34px;display:flex;align-items:center;padding:0 14px;border-radius:99px}.rail{flex:1;height:5px;border-radius:9px;background:linear-gradient(90deg,var(--green) 62%,var(--line) 62%);position:relative}.rail i{position:absolute;left:62%;top:-7px;width:19px;height:19px;border-radius:50%;background:#fff;border:3px solid var(--green);margin-left:-9px}
+h2{font:800 22px Figtree;margin:42px 0 12px}
+.stage{position:relative;width:1040px;max-width:100%;height:380px;background:var(--frame);border:1px solid var(--line);overflow:hidden}
+.face{position:absolute;left:50%;top:104px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:var(--soft);border:2px solid var(--ink);display:grid;place-items:center;font:800 60px Figtree;color:var(--green)}
+.stage .p{position:absolute}.back{filter:blur(2.2px);opacity:.75}
+</style></head><body>
+<h1>Orbit pieces, candidates</h1>
+<p class="s">Small pieces of product interface instead of generic icons. No figures, so nothing needs a qualifier. Pick the 6 or 7 you like; I will draw them at final quality.</p>
+<div class="grid">
+<div class="cell"><b>A</b><button class="p pay">Pay now</button><small>Primary button</small></div>
+<div class="cell"><b>B</b><div class="p tog"><i></i></div><small>Toggle</small></div>
+<div class="cell"><b>C</b><div class="p step"><em>Step 2 of 4</em><div class="bar"><span class="on"></span><span class="on"></span><span></span><span></span></div></div><small>Stepper</small></div>
+<div class="cell"><b>D</b><div class="p field"><span class="chip"></span>•••• 4242<span class="caret"></span></div><small>Card field</small></div>
+<div class="cell"><b>E</b><div class="p tick"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><small>Confirmed</small></div>
+<div class="cell"><b>F</b><div class="p stars">★★★★★</div><small>Rating</small></div>
+<div class="cell"><b>G</b><div class="p card"></div><small>Card, no brand</small></div>
+<div class="cell"><b>H</b><div class="p chk"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Save my card</div><small>Checkbox</small></div>
+<div class="cell"><b>I</b><div class="p toast"><i></i>Saved</div><small>Toast</small></div>
+<div class="cell"><b>J</b><div class="p seg"><span class="on">Room</span><span>Flight</span><span>Car</span></div><small>Segmented tabs</small></div>
+<div class="cell"><b>K</b><div class="p price"><div class="sk s"></div><div class="sk"></div><div class="sk g"></div></div><small>Price line, skeleton</small></div>
+<div class="cell"><b>L</b><div class="p slider"><div class="rail"><i></i></div></div><small>Slider</small></div>
+</div>
+<h2>How a set could sit around the head</h2>
+<div class="stage"><span class="face">VT</span>
+<button class="p pay back" style="left:150px;top:36px">Pay now</button>
+<div class="p tog back" style="left:470px;top:14px;transform:scale(.85)"><i></i></div>
+<div class="p step back" style="left:770px;top:48px;transform:scale(.8)"><em>Step 2 of 4</em><div class="bar"><span class="on"></span><span class="on"></span><span></span><span></span></div></div>
+<div class="p card" style="left:112px;top:148px"></div>
+<div class="p tick" style="left:800px;top:154px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+<div class="p stars" style="left:228px;top:96px;transform:scale(.9)">★★★★★</div>
+<div class="p toast" style="left:690px;top:100px;transform:scale(.95)"><i></i>Saved</div>
+<div class="p field" style="left:120px;top:288px;transform:scale(.9)"><span class="chip"></span>•••• 4242<span class="caret"></span></div>
+<div class="p chk" style="left:760px;top:276px"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Save my card</div>
+</div>
+</body></html>
