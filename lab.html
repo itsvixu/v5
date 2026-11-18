@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab | Vik Tailor</title>
+  <meta name="description" content="Projects I build to test ideas, each with a case study. Card Offer Intelligence and UK Garden Creatures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-lens="craft">
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');d.setAttribute('data-lens',pick('lens',['craft','lead'],'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="review-bar" role="status"></div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="./index.html">VIXU<span>Vik Tailor</span></a>
+    <nav aria-label="Primary"><ul><li><a href="./index.html">Work</a></li><li><a href="./about.html">About</a></li><li><a href="./contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="wrap case-head">
+  <a class="back" href="./index.html"><span aria-hidden="true">←</span> Back to home</a>
+  <h1>Lab</h1>
+  <p class="lede">Projects I build to test ideas, each with a case study. They are my own, not client work, so you can open them and try them.</p>
+</section>
+<section class="wrap band" style="padding-top:0">
+  <ul class="work lab" id="lab-list"></ul>
+  <noscript><p><a href="./lab/card-offer-intelligence.html">Card Offer Intelligence</a> and <a href="./lab/uk-garden-creatures.html">UK Garden Creatures</a>.</p></noscript>
+</section>
+</main>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Vik Tailor, VIXU Design, London. 2026.</p>
+    <p><a href="./lab.html" aria-current="page">Lab</a> &nbsp; <a href="https://www.linkedin.com/in/vtailor" rel="me">LinkedIn</a></p>
+  </div>
+</footer>
+<script src="./main.js"></script>
+<script src="./lab/cards.js"></script>
+<script>
+(function () {
+  var list = document.getElementById('lab-list'), cards = window.LAB_CARDS || [];
+  function el(t, c, h) { var e = document.createElement(t); if (c) e.className = c; if (h != null) e.textContent = h; return e; }
+  function fmt(d) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ''); if (!m) return ''; var n = ['January','February','March','April','May','June','July','August','September','October','November','December']; return +m[3] + ' ' + n[+m[2] - 1] + ' ' + m[1]; }
+  cards.forEach(function (c) {
+    var li = el('li'), a = el('a'); a.href = './lab/' + c.url;
+    var fig = el('figure', 'slot'); fig.setAttribute('data-r', 'thumb');
+    var img = el('img'); img.src = c.thumb.replace('../', './'); img.alt = c.thumbAlt || ''; img.width = 800; img.height = 600; img.loading = 'lazy'; fig.appendChild(img);
+    var body = el('div'); body.appendChild(el('p', 'when', c.when)); body.appendChild(el('h3', '', c.title)); body.appendChild(el('p', 'line', c.line));
+    if (c.angle) { body.appendChild(el('p', 'angle lens-craft', c.angle.craft)); body.appendChild(el('p', 'angle lens-lead', c.angle.lead)); }
+    a.appendChild(fig); a.appendChild(body);
+    var meta = el('p', 'lab-meta');
+    if (c.status) meta.appendChild(el('span', 'lab-status', c.status));
+    if (c.updated) meta.appendChild(el('span', 'lab-upd', 'Updated ' + fmt(c.updated)));
+    a.appendChild(meta);
+    li.appendChild(a);
+    var L = c.links || {}, names = [['live', 'Live'], ['demo', 'Demo'], ['code', 'Code']], row = el('p', 'lab-links'), n = 0;
+    names.forEach(function (k) { if (L[k[0]]) { var x = el('a', '', k[1]); x.href = L[k[0]]; x.target = '_blank'; x.rel = 'noopener'; row.appendChild(x); n++; } });
+    if (!n) row.appendChild(el('span', 'lab-nolink', 'Not public yet'));
+    li.appendChild(row); list.appendChild(li);
+  });
+})();
+</script>
+</body>
+</html>

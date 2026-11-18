@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UK Garden Creatures | Vik Tailor</title>
+  <meta name="description" content="Twelve interactive stories about UK garden wildlife for primary school children, from a young robin at my window to a template for the whole set. Designed and directed by Vik Tailor and built with Claude Code and Cowork.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-lens="craft" data-case="uk-garden-creatures">
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');d.setAttribute('data-lens',pick('lens',['craft','lead'],'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="review-bar" role="status"></div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">VIXU<span>Vik Tailor</span></a><a class="back-btn" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a>
+    <nav aria-label="Primary"><ul><li><a href="../index.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap case-head"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a><p class="when">VIXU Design, 2026</p><h1>UK Garden Creatures</h1><p class="lede">Twelve interactive stories about UK garden wildlife for primary school children. Each one follows a creature through its real life story and ends with a quiz and a badge to collect.</p><dl class="facts"><div><dt>My role</dt><dd>I came up with it, set the structure and led the design direction. I directed the build with Claude.</dd></div><div><dt>What I did myself</dt><dd>I decided the goal and the structure of each story. The quiz, the badges, the animations, the illustration style and the use of sound were my calls too.</dd></div><div><dt>What others owned</dt><dd>Claude advised on the facts and the safety wording and I followed its recommendations. A handful of children and one parent have tried it. A local primary school is in early talks.</dd></div><div><dt>Dates</dt><dd>The idea began in spring 2026. I made the first two stories and the template in July 2026 and the rest between July and November. I redrew the illustrations in November 2026.</dd></div><div><dt>Built with</dt><dd>Claude Code and Cowork, starting in a Claude chat project. The illustrations are drawn in code with Python scripts. Hosted on my own Cloudflare account.</dd></div><div><dt>See it</dt><dd>Not public yet.</dd></div></dl></div><div class="wrap case-body"><nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#problem">The problem</a></li><li><a href="#hard">What made it hard</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#history">How it changed</a></li><li><a href="#results">Results</a></li><li><a href="#wrong">What went wrong</a></li><li><a href="#change">What I'd change</a></li></ol></nav><div class="case-main"><section id="problem" data-nav="The problem">
+  <h2>The problem</h2>
+  <p>In spring 2026 a young robin started coming to our window every day to look at us. I looked up how robins grow up so I could explain it to my children.</p>
+  <p>That became a story called Rusty the Robin. I named him Rusty because we were curious about how young robins get their red breast. I kept the names simple for my 5 year old son, who likes characters whose names rhyme and start with the same letter. Every creature since has followed that rule.</p>
+  <p>The stories are for primary school children, from around 3 or 4 up to 11. I first wrote them for ages 7 to 10 and widened the range later. Each story follows one creature through its real life cycle and has a reveal in the middle. It has three activities, and a badge at the end.</p>
+  <figure class="slot" data-r="wide"><span class="name">The landing page, November 2026. Screenshot of the current version, taken from the saved file</span><img src="../images/uk-garden-creatures/landing-2026-11-16.jpg" alt="The Garden Creatures landing page: a title, a short introduction and cards for Bethany the Butterfly, Dario the Dragonfly and Lizzy the Leafcutter Bee on a green hill" width="1440" height="900" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+</section>
+
+<section id="hard" data-nav="What made it hard">
+  <h2>What made it hard</h2>
+  <p>Children from 3 to 11 read very differently, so the text has to be simple and short and the pages have to work for someone still learning to read.</p>
+  <p>Every fact has to be right and nothing can frighten a child. The brief for the newt asks me to avoid implying a Great Crested Newt, which is legally protected in the UK. Patch is a woodpigeon, and his story steers clear of the city pigeons people picture being fed bread.</p>
+  <p>The illustrations are the hardest part. They are drawn as vectors in code, and some young birds are meant to look fluffy. The robin, the pigeon and the magpie were the hardest, because a flat shape does not look soft.</p>
+  <p>Each story also has to work on its own in a browser with no login. It has sound and animation and a scroll-driven reveal, and it has to stay accessible.</p>
+</section>
+
+<section id="decisions" data-nav="Decisions">
+  <h2>Decisions</h2>
+
+  <article class="decision">
+    <h3>A template after two stories</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>Making each creature its own bespoke story. I hadn't expected to make more than one.</dd></div>
+      <div><dt>Chose</dt><dd>A template that every new creature is copied from, with a brief and a written narrative signed off before any code. It allowed small changes, such as creatures whose life cycle is slightly different.</dd></div>
+      <div><dt>Why</dt><dd>As we saw more wildlife in our garden, conversations with my children inspired more stories. I tried out a few ideas with Claude and found the stories had more in common than they had differences. Keeping the format consistent also helps children get used to it and understand it.</dd></div>
+    </dl>
+    <p class="result"><strong>12</strong> stories now use the same ten-chapter format, three activities and badge, as listed in the project's handoff notes.</p>
+  </article>
+
+  <article class="decision">
+    <h3>Redraw it in a cut-paper style</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>The first style, with bold ink outlines around every shape.</dd></div>
+      <div><dt>Chose</dt><dd>Layered shapes of cut paper with no outlines, and a shared palette. I redrew all twelve stories and the landing page.</dd></div>
+      <div><dt>Why</dt><dd>I wasn't happy with the original outputs. I wanted to see if I could replicate the style of popular cartoons such as Sarah and Duck and Charlie and Lola.</dd></div>
+    </dl>
+  </article>
+
+  <article class="decision">
+    <h3>One colour held back for the reveal</h3>
+    <dl>
+      <div><dt>Considered</dt><dd><span class="cf" data-note="Is this the alternative? The reveal began in Rusty's story and you then saw that every creature had one. Confirm or rewrite.">Keeping the reveal as a one-off in Rusty's story, where it began.</span></dd></div>
+      <div><dt>Chose</dt><dd>Each creature has one colour that does not appear anywhere before the reveal in chapter 5. For Rusty it is the red breast and for Newton the orange belly.</dd></div>
+      <div><dt>Why</dt><dd>The reveal was the magical hook from the very start with Rusty the Robin. Working on the other stories I realised that each creature had a moment like it. It reminded me of the ending of The Very Hungry Caterpillar. It adds delight, which children love.</dd></div>
+    </dl>
+  </article>
+
+  <article class="decision">
+    <h3>A quiz and a badge in every story</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>Marking the quiz. An earlier version came across as too strict for this age group.</dd></div>
+      <div><dt>Chose</dt><dd>A simple multiple choice quiz that can be retried, two games, and a badge to collect at the end. The badge came later. A landing page shows each story as in progress, finished or 100% on the quiz.</dd></div>
+      <div><dt>Why</dt><dd>I didn't want to put children off, so the quiz stayed simple. The badge helps them feel they can come back to a story to learn more and get top marks. I built e-learning for police forces earlier in my career, where the most competitive users came back to get 100% even when 80% was enough to pass.</dd></div>
+    </dl>
+  </article>
+
+  <p>I followed Claude's recommendations on the facts and the safety wording in each story, and I led on the design direction. I decided what to ask for and how it should look and feel. Claude helped me check that each approach would work.</p>
+</section>
+
+<section id="history" data-nav="How it changed">
+  <h2>How it changed</h2>
+  <p>The biggest change was in November 2026, when I redrew every story. The pairs below show the same moment in the old and the new style. I could not recover screenshots taken at the time, so each image was captured again from the saved files in November 2026.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
+    <figure class="slot" data-r="wide"><span class="name">Rusty, July 2026. Ink outlines. Screenshot of the saved file dated 18 July 2026, taken in November 2026</span><img src="../images/uk-garden-creatures/history/2026-07-18-rusty-red-breast-ink-outline.jpg" alt="Rusty the robin in the first style, drawn with thick dark outlines, with his red breast fully grown, against an orange sun" width="960" height="782" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <figure class="slot" data-r="wide"><span class="name">Rusty, November 2026. Cut-paper style. Screenshot of the current file</span><img src="../images/uk-garden-creatures/history/2026-11-16-rusty-red-breast-cut-paper.jpg" alt="Rusty the robin in the new style, with soft layered shapes and a textured red breast, perched on a branch in front of green hedges" width="628" height="472" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem">
+    <figure class="slot" data-r="wide"><span class="name">Newton, July 2026. Ink outlines. Screenshot of the saved file dated 19 July 2026, taken in November 2026</span><img src="../images/uk-garden-creatures/history/2026-07-19-newton-crest-ink-outline.jpg" alt="Newton the newt in the first style, with thick dark outlines, a wavy crest and an orange belly, in front of a pale orange sun" width="960" height="782" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <figure class="slot" data-r="wide"><span class="name">Newton, November 2026. Cut-paper style. Screenshot of the current file</span><img src="../images/uk-garden-creatures/history/2026-11-16-newton-crest-cut-paper.jpg" alt="Newton the newt in the new style, swimming underwater with an orange belly, a crest on his back and pond plants either side" width="500" height="376" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem">
+    <figure class="slot" data-r="wide"><span class="name">Mabel the magpie as a fledgling, before November 2026. Ink outlines. Screenshot of the retired version, which I kept as a backup. The date of its original build is not recorded</span><img src="../images/uk-garden-creatures/history/2026-09-mabel-fledgling-ink-outline.jpg" alt="Mabel the magpie fledgling in the first style, a dark round bird with a white stripe sitting on a flat brown nest" width="500" height="406" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <figure class="slot" data-r="wide"><span class="name">Mabel, November 2026. Cut-paper style. Screenshot of the current file</span><img src="../images/uk-garden-creatures/history/2026-11-16-mabel-fledgling-cut-paper.jpg" alt="Mabel the magpie fledgling in the new style, with layered shapes, a white belly and a dark blue wing on a nest beside a tree trunk" width="500" height="376" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </div>
+  <p>I could not show the first version of Rusty from the July Claude chats or the steps between the two styles, and I did not recreate them.</p>
+</section>
+
+<section id="results" data-nav="Results">
+  <h2>Results</h2>
+  <div class="figs">
+    <p class="fig"><span class="n">12</span><span class="l">stories built: ten new creatures and the original robin and newt, counted from the project files</span></p>
+    <p class="fig"><span class="n">10</span><span class="l">chapters in each story, with three activities and a badge</span></p>
+  </div>
+  <p>I have no measured results. A handful of children have tried it, and I have not recorded anything from those sessions beyond what they said.</p>
+  <p>They enjoyed the quiz. The story worked well as a bedtime story. My son said he wanted to replace his bedtime stories with one of these every night, and the badges made children want to carry on. Another child's parent told me it inspired them to spend more time in their garden. That is informal feedback from a few people.</p>
+  <p>Talks with a local primary school are starting to take shape.</p>
+</section>
+
+<section id="wrong" data-nav="What went wrong">
+  <h2>What went wrong</h2>
+  <div class="miss">
+    <h3>The first illustrations weren't good enough</h3>
+    <p>I wasn't happy with the original outputs, and there were many rounds of illustration. The young robin, pigeon and magpie were the hardest, because they are meant to look fluffy and a vector shape looks flat. Each round took time to try and to check.</p>
+  </div>
+  <div class="miss">
+    <h3>Bugs that every story shared</h3>
+    <p>Because the stories came from one template, a mistake spread to all ten. The scroll-linked reveal measured progress against the whole chapter and ignored the picture, and the tap targets in the first activity were invisible by default. Both were fixed across all ten files, as the project's handoff notes record. I tested each build myself on my laptop and phone and raised the bugs myself. I oversaw many product launches in my career and was often asked to test other teams' work as well.</p>
+  </div>
+</section>
+
+<section id="change" data-nav="What I'd change">
+  <h2>What I would do differently</h2>
+  <p>I would start from the foundations on the illustrations. Trying many different versions and checking each one cost me more time than anything else.</p>
+  <p>Next I want to pitch it to the local school and collect more feedback. Then I will take that research, with an updated project, to UK wildlife charities.</p>
+</section>
+<aside class="snapshot" aria-label="About this page"><h2>This is a snapshot</h2><p>I keep a fuller version of this case study, with working files, for interviews. The older screenshots here were captured again in November 2026 from saved files. The site is hosted on my own account and is not public yet.</p><p><a href="../contact.html?case=UK%20Garden%20Creatures" data-full-case="uk-garden-creatures">Ask for the full case study</a></p></aside><p class="next"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a></p></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Vik Tailor, VIXU Design, London. 2026.</p>
+    <p><a href="https://www.linkedin.com/in/vtailor" rel="me">LinkedIn</a></p>
+  </div>
+</footer>
+<script src="../main.js"></script>
+</body>
+</html>

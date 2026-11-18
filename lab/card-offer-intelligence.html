@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Offer Intelligence | Vik Tailor</title>
+  <meta name="description" content="A scanner that reads competitor credit card offers twice a week and a dashboard that shows what changed next to a screenshot of the page. A working prototype at Expedia Group in 2025, rebuilt by Vik Tailor in 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-lens="craft" data-case="card-offer-intelligence">
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');d.setAttribute('data-lens',pick('lens',['craft','lead'],'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="review-bar" role="status"></div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">VIXU<span>Vik Tailor</span></a><a class="back-btn" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a>
+    <nav aria-label="Primary"><ul><li><a href="../index.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap case-head"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a><p class="when">VIXU Design, 2026, and Expedia Group, 2025</p><h1>Card Offer Intelligence</h1><p class="lede">A scanner that reads competitor credit card offers twice a week, and a dashboard that shows what changed next to a screenshot of the page. I built a working prototype at Expedia Group in 2025 and rebuilt it in 2026.</p><dl class="facts"><div><dt>My role</dt><dd>I wrote the spec, designed the dashboard and directed the build.</dd></div><div><dt>What I did myself</dt><dd>The spec, the design of the dashboard and the decisions below. The 2026 code was written with Claude Code, under my direction.</dd></div><div><dt>What others owned</dt><dd>The Expedia prototype was a solo project. I took feedback from my manager, a senior director of design, and from the strategic marketing lead for the credit card workstream. The 2026 rebuild is my own project.</dd></div><div><dt>Dates</dt><dd>The Expedia prototype ran from spring to the end of 2025. I built the first dashboard in July 2026 and rebuilt it in November 2026. The scanner and dashboard went public on 17 November 2026.</dd></div><div><dt>Built with</dt><dd>Claude Code, Playwright, Node.js, SQLite and GitHub Actions.</dd></div><div><dt>See it</dt><dd><a href="https://itsvixu.github.io/card-offer-intelligence/" target="_blank" rel="noopener">The live dashboard</a>, <a href="https://itsvixu.github.io/card-offer-intelligence/demo/" target="_blank" rel="noopener">the demo with change history</a> and <a href="https://github.com/itsvixu/card-offer-intelligence" target="_blank" rel="noopener">the code</a>.</dd></div></dl></div><div class="wrap case-body"><nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#problem">The problem</a></li><li><a href="#hard">What made it hard</a></li><li><a href="#first">The first dashboard</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#results">Results</a></li><li><a href="#wrong">What went wrong</a></li><li><a href="#change">What I'd change</a></li></ol></nav><div class="case-main"><section id="problem" data-nav="The problem">
+  <h2>The problem</h2>
+  <p>We wanted to know what competitors were offering new cardholders. The four facts we cared about on each card were the welcome bonus, the spend needed to earn it, the time allowed and the annual fee, and we wanted to see the creative each issuer used to sell the offer.</p>
+  <p>We found all of this by hand. It took a lot of time, and every figure needed a person to check it, because one wrong digit in a bonus or a fee makes a comparison worthless.</p>
+  <p>In spring 2025 I started a working prototype of an agent to do the finding. It pulled in the latest offer numbers from competitors in the US market and the changes to them, fed them into a newsletter for senior leaders and linked through to the competitors' offer designs. We still had to get the screenshots by hand to see how each offer was designed. I describe it in <a href="../work/building-with-ai.html#agent">Building with AI</a>. Work on it continued through the end of 2025. Internal changes and reorganisations kept delaying it, so it didn't ship there. In 2026 I rebuilt it as my own project.</p>
+</section>
+
+<section id="hard" data-nav="What made it hard">
+  <h2>What made it hard</h2>
+  <p>Issuer pages are built with JavaScript and each one words its offer differently. The bonus can sit in a headline, the spend in the body and the time allowed in a footnote.</p>
+  <p>Some sites refuse automated visits. Bank of America and NerdWallet both turned the scanner away, so I left them out.</p>
+  <p>Some offers don't come as a single number. American Express shows "as high as" 100,000 points, which is a ceiling, so the dashboard labels it as targeted.</p>
+  <p>A wrong figure undermines the whole report, so the scanner has to say when it isn't sure.</p>
+</section>
+
+<section id="first" data-nav="The first dashboard">
+  <h2>The first dashboard still depended on people</h2>
+  <p>The first dashboard, in July 2026, was a table, a creative board and a draft of the weekly newsletter for senior leaders. The offer numbers in it came from a tool I had first built in Claude. Five of its 21 rows were placeholders labelled as illustrative. The screenshots still had to be found by hand and pasted in through a bulk-import box.</p>
+  <figure class="slot" data-r="wide"><span class="name">The first dashboard</span><img src="../images/card-offer-intelligence/before-dashboard.jpg" alt="The first dashboard: a table of card offers labelled as a prototype with a sample dataset" width="1440" height="1000" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  <p>Its own footer dated the data to July 2026. When the scanner first ran in November I compared the two. Six cards were in both, and four of them showed a different offer or figure on the issuer's own page.</p>
+  <div class="table-scroll"><table>
+    <caption>July data against the live pages in November</caption>
+    <thead><tr><th scope="col">Card</th><th scope="col">July dataset</th><th scope="col">Live page, November</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Chase Sapphire Preferred</th><td>100,000 points</td><td>75,000 points</td></tr>
+      <tr><th scope="row">American Express Platinum</th><td>$695 annual fee</td><td>$895 annual fee</td></tr>
+      <tr><th scope="row">Wells Fargo Active Cash</th><td>$200 bonus</td><td>$100 bonus</td></tr>
+      <tr><th scope="row">Discover it Cash Back</th><td>Led with Cashback Match</td><td>Leads with a $200 bonus</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="decisions" data-nav="Decisions">
+  <h2>Decisions</h2>
+
+  <article class="decision">
+    <h3>Compare the figures</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>Alerting when the wording on a page changes, or when words like "new" or "limited time" appear.</dd></div>
+      <div><dt>Chose</dt><dd>Read each offer into four facts, which are the bonus, the spend, the time allowed and the annual fee, and compare them with the last scan one at a time.</dd></div>
+      <div><dt>Why</dt><dd>The point is market intelligence on each competitor's value proposition and on changes to its offer amounts. Issuers often change only the amount and leave every other word on the page as it was, so a wording alert would miss exactly those changes.</dd></div>
+    </dl>
+    <p class="result"><strong>4 of 6</strong> cards in both the July data and the first scan showed a different offer or figure.</p>
+  </article>
+
+  <article class="decision">
+    <h3>Keep a person in the loop</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>Treating a page the scanner couldn't read as unchanged.</dd></div>
+      <div><dt>Chose</dt><dd>Pages it can't read with confidence go to a separate Needs a look list and aren't reported as changed or unchanged. Every change shows a screenshot and the issuer's own wording.</dd></div>
+      <div><dt>Why</dt><dd>At Expedia we had to verify every offer the prototype found, and the review of the offer designs was always done by the team. I kept that, and built the dashboard around making the check quick. I think the point where people stay in the loop is the most important decision in a system like this.</dd></div>
+    </dl>
+  <figure class="slot" data-r="wide"><span class="name">A card's detail panel</span><img src="../images/card-offer-intelligence/card-detail.jpg" alt="A card's detail panel with its screenshot, current offer, the page's own wording and its history" width="1440" height="1000" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </article>
+
+  <article class="decision">
+    <h3>Screenshots beside the numbers</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>Image links pasted in by hand through a bulk-import box, which is how the first dashboard worked.</dd></div>
+      <div><dt>Chose</dt><dd>The scanner takes a screenshot of each page and keeps a new one whenever an offer changes.</dd></div>
+      <div><dt>Why</dt><dd>The screenshots show the design teams how an offer is presented. At Expedia the <a href="../work/card-offer-in-checkout.html">"Show the Math"</a> design linked the offer to the booking value. In later tests the offer values were reduced and it still performed better, because of that link.</dd></div>
+    </dl>
+    <p class="result"><strong>1st of 5</strong> travel credit card adverts for comprehension, at 7.1 out of 10, and second for value, in independent research for the Show the Math work with 47 travellers.</p>
+  <figure class="slot" data-r="wide"><span class="name">A screenshot taken by the scanner</span><img src="../images/card-offer-intelligence/capture-amex-gold.jpg" alt="An automatic screenshot of the American Express Gold Card page showing its welcome offer" width="1440" height="1000" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </article>
+
+  <article class="decision">
+    <h3>Open on what changed</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>The table of cards that the first dashboard opened on.</dd></div>
+      <div><dt>Chose</dt><dd>The first screen shows what changed since the last scan. The full list of cards is one tab away, and a quiet week says so. Changes are marked with an arrow up or down, and I left out red and green.</dd></div>
+      <div><dt>Why</dt><dd>A competitor raising a bonus isn't good or bad news in itself.</dd></div>
+    </dl>
+  <figure class="slot" data-r="wide"><span class="name">The change feed (demo)</span><img src="../images/card-offer-intelligence/changes.jpg" alt="The change feed in the demo: each change shows the card, a plain-language headline, before and after values and a screenshot" width="1440" height="1000" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <p>This is the demo. Everything in it comes from a real scan except the change history, which is simulated so the feed has something in it. The live dashboard shows no changes yet.</p>
+  </article>
+
+  <article class="decision">
+    <h3>No selector for each page</h3>
+    <dl>
+      <div><dt>Considered</dt><dd>A CSS selector for each card page, which is how the first version of the scanner worked.</dd></div>
+      <div><dt>Chose</dt><dd>The scanner reads the page in order and takes the first statement that pairs a bonus with a spend requirement as the card's own offer.</dd></div>
+      <div><dt>Why</dt><dd>Selectors broke whenever an issuer redesigned a page. With this rule a new card needs only a link.</dd></div>
+    </dl>
+  </article>
+</section>
+
+<section id="results" data-nav="Results">
+  <h2>Results</h2>
+  <div class="figs">
+    <p class="fig"><span class="n">14</span><span class="l">card pages read twice a week, 10 in the US and 4 in the UK</span></p>
+    <p class="fig"><span class="n">About 2 min</span><span class="l">for a full scan on my machine</span></p>
+    <p class="fig"><span class="n">4 of 6</span><span class="l">cards in both the July data and the first scan showed a different offer or figure</span></p>
+    <p class="fig"><span class="n">$0</span><span class="l">a month to run. GitHub's free tier covers a public repository, and the AI step is switched off</span></p>
+  </div>
+  <p>There are no usage numbers yet. The live dashboard shows no changes until a scan finds one.</p>
+  <p>The Expedia version went to directors and senior directors, and to the strategic marketing lead for the project.</p>
+  <figure class="slot" data-r="wide"><span class="name">Every card, with its current offer</span><img src="../images/card-offer-intelligence/cards.jpg" alt="A gallery of every tracked card with its current offer and a screenshot of its page" width="1440" height="1000" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+</section>
+
+<section id="wrong" data-nav="What went wrong">
+  <h2>What went wrong</h2>
+  <div class="miss">
+    <h3>The parser misread two pages on the first real scan</h3>
+    <p>It read Chase Freedom Unlimited as 1.5% cash back, which is the everyday rate, and missed the $200 bonus. It missed HSBC's spend because screen-reader labels sat in the middle of the sentence. Both are fixed, and the tests now use text from the real pages.</p>
+  </div>
+  <div class="miss">
+    <h3>American Express blocked the first read</h3>
+    <p>Three American Express pages failed because the site doesn't let scripts read the page text. The scanner now reads the text another way.</p>
+  </div>
+  <div class="miss">
+    <h3>An empty answer counted as a confident one</h3>
+    <p>An early version of the AI fallback treated a reply that found nothing as a confident reading, which would have turned an unreadable offer into "no change". It now stays low confidence and goes to the Needs a look list. The fallback is built but switched off, so the live scans don't use it.</p>
+  </div>
+  <div class="miss">
+    <h3>A slow page cost a card its scan</h3>
+    <p>The first scan in GitHub Actions timed out on Barclaycard Avios. The scanner now retries a slow page once.</p>
+  </div>
+</section>
+
+<section id="change" data-nav="What I'd change">
+  <h2>What I would do differently</h2>
+  <p>I would have polished the interface more. I would also have set up automated updates in Slack channels and automated email reports, to encourage people to use it.</p>
+  <p>Next I'd like to include paid social and mentions of the cards on social media. That means tracking offer creative across paid social and display, where most new campaigns appear first, and alerting the people who own each competitor relationship when their cards move. The spec left paid social and display out on purpose because they need a different kind of tool, so that would be a separate piece of work.</p>
+  <p>The first dashboard could draft the weekly newsletter. This one can't yet, and the emailed report covers part of that once email is switched on.</p>
+  <p>It reads public offers. Personalised offers behind a login or an eligibility check are out of reach. The scanner checks each site's robots.txt before it fetches a page.</p>
+</section>
+<aside class="snapshot" aria-label="About this page"><h2>This is a snapshot</h2><p>I keep a fuller version of this case study, with working files, for interviews. The screens here are from the live scanner and dashboard. The change feed is from the demo, where the history is simulated.</p><p><a href="../contact.html?case=Card%20Offer%20Intelligence" data-full-case="card-offer-intelligence">Ask for the full case study</a></p></aside><p class="next"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a><a href="../work/building-with-ai.html">Next: Building with AI</a></p></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Vik Tailor, VIXU Design, London. 2026.</p>
+    <p><a href="https://www.linkedin.com/in/vtailor" rel="me">LinkedIn</a></p>
+  </div>
+</footer>
+<script src="../main.js"></script>
+</body>
+</html>
