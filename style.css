@@ -475,3 +475,4 @@ html, body { overflow-x: clip; }
 .site-foot .wrap p a + a { margin-left: 4px; }
 @media (min-width: 1000px) { .work.lab li:last-child:not(.lead-row) { grid-column: auto; } }
 .case-head .back + h1 { margin-top: 28px; }
+.work.lab .slot { max-width: none; width: 100%; }
