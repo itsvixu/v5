@@ -476,3 +476,9 @@ html, body { overflow-x: clip; }
 @media (min-width: 1000px) { .work.lab li:last-child:not(.lead-row) { grid-column: auto; } }
 .case-head .back + h1 { margin-top: 28px; }
 .work.lab .slot { max-width: none; width: 100%; }
+
+/* Filled home-card thumbs */
+.work:not(.lab) .slot img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border: 0; border-bottom: 1px solid var(--line); transition: transform .5s ease; }
+.work:not(.lab) a:hover .slot img { transform: scale(1.03); }
+@media (min-width: 1000px) { .work li.lead-row .slot img { height: 100%; aspect-ratio: auto; min-height: 320px; border-bottom: 0; border-right: 1px solid var(--line); } }
+@media (prefers-reduced-motion: reduce) { .work .slot img { transition: none; } }

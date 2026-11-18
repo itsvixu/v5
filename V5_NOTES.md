@@ -28,3 +28,9 @@ To confirm
 - Tools: timed tornado, plays once when the grid reaches 70% of the viewport. Funnel of logos, three and a half turns over 4.2s, centred on the viewport, then lands in the grid. Not scroll-scrubbed, so it runs the same on phones.
 - Logos: renamed to the slugs in README.txt. locog was a WebP with an .svg extension, converted to locog.png. Met Police, London Ambulance, LOCOG are raster/boxed so they render in grey (class `raw`) rather than flat black. Still missing, text wordmark shows: College of Policing, Home Office, KarmaRama, The Calling. wells fargo.svg is in the folder but not in the strip (not on the brand list).
 - Old unsuffixed logo files (with spaces, ambulance.png etc.) can be deleted once happy.
+
+## Round 6: image population from v2
+- 19 slots filled from the v2 live images (resized to 1600px max, in `images/work/`), plus the garden wildlife landing screenshot on the home card and Building with AI.
+- Home card thumbs: new CSS block at the end of style.css.
+- Left as placeholders (no suitable v2 image): checkout module card (HCOM CC ux is a flow diagram), card-offer module evolution and statement credit, application step 1, SDK look and feel, all Trainline, Lloyds, Leading a design team and remaining Building with AI slots, SYW pivot, drawer, copy, icons, receipts, pre-fill, income sheet.
+- v2 images include "Confidential" footers and test figures. v2 already published them; review before launch.
