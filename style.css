@@ -95,7 +95,7 @@ body[data-lens="lead"] .lens-craft { display: none !important; }
   .work a { grid-template-columns: 200px minmax(0, 1fr) 230px; align-items: start; }
   .work li.lead-row a { grid-template-columns: 320px minmax(0, 1fr) 230px; padding: 34px 0; }
 }
-@media (max-width: 859px) { .work .slot { max-width: 320px; } }
+@media (max-width: 859px) { .work .slot { max-width: none; width: 100%; } }
 
 /* ---------- Capability index ---------- */
 .can { margin: 24px 0 0; display: grid; gap: 0; }
