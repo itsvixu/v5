@@ -568,3 +568,7 @@ html, body { overflow-x: clip; }
 
 /* cards whose screenshot must show all four edges */
 .work:not(.lab) .slot img.whole { object-fit: contain; object-position: center; background: #000; }
+
+/* empty image slots stay out of sight until the image is added; ?review=1 shows them */
+body:not([data-review]) .slot:has(> .hole) { display: none; }
+body:not([data-review]) .slots:not(:has(.slot img)) { display: none; }
