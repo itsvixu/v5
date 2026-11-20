@@ -502,3 +502,16 @@ html, body { overflow-x: clip; }
 .about-wide { margin: 40px 0 0; max-width: 880px; }
 .about-wide img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
 .about-wide figcaption { margin-top: 10px; font-size: .9rem; color: var(--ink-2); max-width: 60ch; }
+
+/* Phones: a tighter, evenly spaced brand strip with more logos in view */
+@media (max-width: 599px) {
+  .marquee { padding-top: 18px; padding-bottom: 20px; }
+  .marquee-label { margin-bottom: 10px; font-size: 1rem; }
+  .mrow + .mrow { margin-top: 10px; }
+  .mrow-label { margin-bottom: 4px; }
+  .marquee ul { gap: 30px; padding: 0 15px; }
+  .logo { min-height: 24px; }
+  .logo img { height: 21px; max-width: 120px; }
+  .logo img.tall { height: 30px; }
+  .logo .wm { font-size: 1.1rem; }
+}
