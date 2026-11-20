@@ -36,7 +36,7 @@ window.LAB_CARDS.push({
     craft: 'What I make now: a set of illustrated, animated stories for children, built with Claude Code and Cowork.',
     lead: 'How I took one idea to a reusable format and tested it with children before showing it to a school.'
   },
-  thumb: '../images/uk-garden-creatures/thumb.jpg',
+  thumb: '../images/uk-garden-creatures/thumb.jpg?v=2',
   thumbAlt: 'The Garden Creatures landing page with cards for a butterfly, a dragonfly and a leafcutter bee on a green hill',
   status: 'In testing',
   updated: '2026-11-18'
