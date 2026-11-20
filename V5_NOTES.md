@@ -34,3 +34,9 @@ To confirm
 - Home card thumbs: new CSS block at the end of style.css.
 - Left as placeholders (no suitable v2 image): checkout module card (HCOM CC ux is a flow diagram), card-offer module evolution and statement credit, application step 1, SDK look and feel, all Trainline, Lloyds, Leading a design team and remaining Building with AI slots, SYW pivot, drawer, copy, icons, receipts, pre-fill, income sheet.
 - v2 images include "Confidential" footers and test figures. v2 already published them; review before launch.
+
+## Public lens and deploy (20 Nov 2026)
+- `?lens=public` is a third lens. Headline "User-centred design lead"; standfirst names interaction design, accessible services, prototyping and the Civil Service start. Work list leads with London 2012, then two ported case studies (`work/inclusive-design.html`, `work/mle-evaluation.html`, public lens only in the list). College of Policing and Home Office logos and four quotes are moved to the front in v5.js. Nothing about Disability Confident or lived experience is on the site.
+- Old v2 links keep working: `public-service.html`, `ps-contact.html` and `case-studies/*.html` are small redirect pages (query strings such as `&ref=` are carried across). Public-service redirects switch to the public lens.
+- `?ref=fundingcircle` now sets the lead lens on every page, including the home page (it was missing there).
+- Snapshot notes and the closing section no longer promise working files or labelled rebuilds. Two pages contain labelled reconstructions: the settings demo and the findings table.

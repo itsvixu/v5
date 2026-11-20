@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=20261120y">
+  <link rel="stylesheet" href="./style.css?v=20261120z">
 </head>
 <body data-lens="craft">
-<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');d.setAttribute('data-lens',pick('lens',['craft','lead'],'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');var fc=(p.get('ref')||'').toLowerCase()==='fundingcircle';try{if(!p.get('lens')&&fc&&s)s.setItem('vixu-lens','lead')}catch(e){}d.setAttribute('data-lens',pick('lens',['craft','lead','public'],fc?'lead':'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"></div>
 <div class="review-bar" role="status"></div>
@@ -27,8 +27,10 @@
   <script>(function(){var h=new Date().getHours(),g=h>=5&&h<12?"Morning":h>=12&&h<17?"Afternoon":h>=17&&h<22?"Evening":"Hi";document.getElementById("greet").textContent=g+", I'm Vik."})()</script>
   <div class="hero-copy">
     <p class="big lens-craft">I'm a product design lead in London. I design credit cards, checkout and loyalty, and I measure whether they&nbsp;work.</p>
+    <p class="big lens-public">I'm a user-centred design lead in London. I design accessible digital services and native apps, and I test them with the people who use&nbsp;them.</p>
     <p class="big lens-lead">I'm a product design lead in London. I lead teams on checkout, credit cards and loyalty, and the results get&nbsp;measured.</p>
     <p class="standfirst lens-craft">I've designed digital products for over 20 years. For the last ten I've worked on checkout, credit cards and loyalty at Expedia Group, across Expedia, Hotels.com and Vrbo. With Lloyds Banking Group and Trainline before that, it adds up to more than twelve years of designing the places where people pay.</p>
+    <p class="standfirst lens-public">I've spent over twenty years designing, prototyping and iterating accessible digital services, with a degree grounded in human-computer interaction. I started in the Civil Service, building national training for the UK's emergency services. Since then I've worked on regulated products, most recently leading design for credit cards, checkout and loyalty at Expedia Group, and before that designing native iOS and Android apps at Trainline.</p>
     <p class="standfirst lens-lead">I've designed digital products for over 20 years, and for the last ten I've led design on checkout, credit cards and loyalty at Expedia Group. There I set direction for around fifteen designers, content designers and researchers, managed three designers directly and kept one project on my own desk.</p>
     <p class="actions"><a class="btn-solid" href="#work">See my work</a><a class="btn-line" href="./contact.html">Say hello</a></p>
   </div>
@@ -49,77 +51,91 @@
   <h2 class="reveal">Selected work</h2>
   <p class="intro reveal">Each project shows my part and the team's, the decisions I made, what shipped and what the results said, including what went wrong.</p>
   <ul class="work" data-orderable>
-    <li data-craft="1" data-lead="2" class="lead-row"><a href="./work/save-your-way.html">
+    <li data-craft="1" data-lead="2" data-public="8" class="lead-row"><a href="./work/save-your-way.html">
       <figure class="slot has-video" data-r="thumb"><span class="name">Save Your Way on Hotels.com</span><img src="./images/work/syw-card-poster.jpg" alt="The Save Your Way page on Hotels.com: a phone showing the choice between saving now and banking the saving for later, beside the headline Choose how you save" width="1280" height="718"><video src="./images/work/syw-card.mp4" poster="./images/work/syw-card-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video></figure>
       <div><p class="when">Hotels.com, 2025</p><h3>Save Your Way</h3>
         <p class="line">A way to bank a hotel saving for a later trip, designed with no precedent to copy and almost no chance to test.</p>
-        <p class="angle lens-craft">The project I led myself from discovery to launch, on web, iOS and Android.</p>
+        <p class="angle lens-craft lens-public">The project I led myself from discovery to launch, on web, iOS and Android.</p>
         <p class="angle lens-lead">The project I kept on my own desk while running four workstreams.</p></div>
       <p class="fig"><span class="n">$505K</span><span class="l">banked as OneKeyCash in the first 28 days</span></p>
     </a></li>
-    <li data-craft="2" data-lead="3"><a href="./work/one-key-card-application.html">
+    <li data-craft="2" data-lead="3" data-public="6"><a href="./work/one-key-card-application.html">
       <figure class="slot" data-r="thumb"><span class="name">One Key Cards page</span><img src="./images/work/one-key-cards-page.jpg" alt="The One Key Cards page on Expedia, comparing the two cards" width="1600" height="862" loading="lazy"></figure>
       <div><p class="when">Expedia Group, 2022 to 2026</p><h3>One Key credit card application</h3>
         <p class="line">A credit card application that had to satisfy a bank's legal team and still make sense to the person applying.</p>
-        <p class="angle lens-craft">Form design, research cycles and a partner's SDK, decision by decision.</p>
+        <p class="angle lens-craft lens-public">Form design, research cycles and a partner's SDK, decision by decision.</p>
         <p class="angle lens-lead">A bank, a card network, two agencies and a review process I had to design as well.</p></div>
       <p class="fig"><span class="n">120+</span><span class="l">rounds of legal, risk and compliance review with the issuing bank</span></p>
     </a></li>
-    <li data-craft="3" data-lead="6"><a href="./work/building-with-ai.html">
+    <li data-craft="3" data-lead="6" data-public="11"><a href="./work/building-with-ai.html">
       <figure class="slot" data-r="thumb"><span class="name">Garden wildlife site, home</span><img src="./images/uk-garden-creatures/landing-2026-11-16.jpg" alt="The UK garden wildlife site home page, live" width="1440" height="900" loading="lazy"></figure>
       <div><p class="when">VIXU Design, 2026</p><h3>Building with AI</h3>
         <p class="line">A wildlife site for schools that I designed and built on my own, and an agent that tracked competitor card offers.</p>
-        <p class="angle lens-craft">What I make now, and how I use AI tools to get from a concept to something that works.</p>
+        <p class="angle lens-craft lens-public">What I make now, and how I use AI tools to get from a concept to something that works.</p>
         <p class="angle lens-lead">How I brought AI into a design team's practice and where I kept people in the loop.</p></div>
       <p class="fig"><span class="n">9 in a day</span><span class="l">offer design variants produced with AI. It used to take a week</span></p>
     </a></li>
-    <li data-craft="4" data-lead="8"><a href="./work/trainline-apps.html">
+    <li data-craft="4" data-lead="8" data-public="4"><a href="./work/trainline-apps.html">
       <figure class="slot" data-r="thumb"><span class="name">Trainline apps</span><img src="./images/work/trainline-card.jpg" alt="Three Trainline app screens on a green background: favourites and the live departure board, a mobile ticket, and journey results" width="1200" height="801" loading="lazy"></figure>
       <div><p class="when">Trainline, earlier work</p><h3>Trainline apps and mobile ticketing</h3>
         <p class="line">A mobile-first rebuild of the UK's biggest train booking site, and mobile ticketing that was the first of its kind for a UK train ticket provider.</p>
-        <p class="angle lens-craft">Native iOS and Android, designed sitting among the engineers.</p>
+        <p class="angle lens-craft lens-public">Native iOS and Android, designed sitting among the engineers.</p>
         <p class="angle lens-lead">First in-house designer. I hired the team that followed and chose the agency.</p></div>
       <p class="fig"><span class="n">8%</span><span class="l">increase in conversion, measured at the time, from homepage search through to checkout</span></p>
     </a></li>
-    <li data-craft="5" data-lead="5"><a href="./work/card-offer-in-checkout.html">
+    <li data-craft="5" data-lead="5" data-public="10"><a href="./work/card-offer-in-checkout.html">
       <figure class="slot" data-r="thumb"><span class="name">Booking form journey, instant use</span><img src="./images/work/card-offer-module.jpg" alt="Internal slide showing the booking form journey after a card is approved: the approval screens, then a saved card and an instant credit option in the payment details" width="1600" height="846" loading="lazy"></figure>
       <div><p class="when">Hotels.com, 2018 to 2022</p><h3>A credit card offer inside checkout</h3>
         <p class="line">Five rounds of testing on one module, in the most conversion-sensitive page of the site.</p>
-        <p class="angle lens-craft">I was the only designer on the card, from the first research brief to the last test.</p>
+        <p class="angle lens-craft lens-public">I was the only designer on the card, from the first research brief to the last test.</p>
         <p class="angle lens-lead">Sole designer on the card, working weekly with the issuing bank.</p></div>
       <p class="fig"><span class="n">+12%</span><span class="l">click-through from an offer banner, with no harm to conversion</span></p>
     </a></li>
-    <li data-craft="6" data-lead="4"><a href="./work/checkout-north-star.html">
+    <li data-craft="6" data-lead="4" data-public="9"><a href="./work/checkout-north-star.html">
       <figure class="slot" data-r="thumb"><span class="name">Booking form, before and after</span><img src="./images/work/cko-progression.jpg" alt="Internal test slide: iterating on a win for the check-in and check-out dates on the booking form" width="1600" height="897" loading="lazy"></figure>
       <div><p class="when">Hotels.com, 2016 to 2019</p><h3>Checkout North Star</h3>
         <p class="line">A long-term vision for the booking form, the measurement plan behind it, and three years of tests. Some of them lost.</p>
-        <p class="angle lens-craft">I wrote the vision, specified the tracking and designed the tests.</p>
+        <p class="angle lens-craft lens-public">I wrote the vision, specified the tracking and designed the tests.</p>
         <p class="angle lens-lead">A vision I wrote, got funded and presented to the leadership team.</p></div>
       <p class="fig"><span class="n">$31.7M</span><span class="l">combined annual gross profit from six winning tests, as modelled by analysts</span></p>
     </a></li>
-    <li data-craft="7" data-lead="9"><a href="./work/lloyds-loans-and-mortgages.html">
+    <li data-craft="7" data-lead="9" data-public="7"><a href="./work/lloyds-loans-and-mortgages.html">
       <figure class="slot" data-r="thumb"><span class="name">Business account application</span><img src="./images/work/lloyds-new-account.jpg" alt="Step 1 of 6 of a Lloyds Bank business current account application: a turnover slider showing 70% and a total payments figure" width="1024" height="576" loading="lazy"></figure>
       <div><p class="when">Lloyds Banking Group, earlier work</p><h3>Business loans and a mortgage tool for bank staff</h3>
         <p class="line">A self-service loan application for small businesses, then internal software for the people who approve mortgages.</p>
-        <p class="angle lens-craft">Regulated forms, and my one internal tool for expert users.</p>
+        <p class="angle lens-craft lens-public">Regulated forms, and my one internal tool for expert users.</p>
         <p class="angle lens-lead">The bank's design representative inside an agency team.</p></div>
       <p class="fig"><span class="n">8 into 1</span><span class="l">manual processes brought into one online application</span></p>
     </a></li>
-    <li data-craft="8" data-lead="1"><a href="./work/leading-a-design-team.html">
+    <li data-craft="8" data-lead="1" data-public="5"><a href="./work/leading-a-design-team.html">
       <figure class="slot" data-r="thumb"><span class="name">Presenting to the team</span><img src="./images/work/leading-talk.jpg" alt="Vik presenting to a room of colleagues, with a slide titled Text to image on the screen behind" width="1600" height="900" loading="lazy"></figure>
       <div><p class="when">Expedia Group, 2022 to 2026</p><h3>Leading a design team</h3>
         <p class="line">Three designers reporting to me, up to four contractors, and a wider group of around fifteen across five time zones.</p>
         <p class="angle lens-craft">How I ran the team while keeping a project of my own.</p>
-        <p class="angle lens-lead">How I ran the team with no Design Director in post.</p></div>
+        <p class="angle lens-lead lens-public">How I ran the team with no Design Director in post.</p></div>
       <p class="fig"><span class="n">4</span><span class="l">workstreams I set direction across</span></p>
     </a></li>
-    <li data-craft="9" data-lead="7"><a href="./work/london-2012.html">
+    <li data-craft="9" data-lead="7" data-public="1"><a href="./work/london-2012.html">
       <figure class="slot" data-r="thumb"><span class="name">Games-readiness module</span><img src="./images/work/london-2012-welcome.jpg" alt="A London 2012 Games awareness module for police officers: the welcome screen with a countdown" width="1008" height="632" loading="lazy"></figure>
       <div><p class="when">College of Policing, earlier work</p><h3>London 2012 training for the emergency services</h3>
         <p class="line">Online Games-readiness training for police, fire and ambulance staff, against a date that could not move.</p>
-        <p class="angle lens-craft">Where I introduced user research and an accessibility standard from nothing.</p>
+        <p class="angle lens-craft lens-public">Where I introduced user research and an accessibility standard from nothing.</p>
         <p class="angle lens-lead">A matrixed team of nine and senior stakeholders across policing.</p></div>
       <p class="fig"><span class="n">7 of 8</span><span class="l">mandatory modules produced by the teams I&nbsp;led</span></p>
+    </a></li>
+    <li class="lens-public" data-craft="20" data-lead="20" data-public="2"><a href="./work/inclusive-design.html">
+      <figure class="slot" data-r="thumb"><span class="name">First-run help for the display settings</span><img src="./images/work/inclusive-first-run-help.jpg" alt="The first-run help overlay of a 2011 training module, naming four display modes: Default, High Contrast, Dyslexia and Colour Blindness" width="560" height="360" loading="lazy"></figure>
+      <div><p class="when">College of Policing, 2010 to 2011</p><h3>Designing for everyone</h3>
+        <p class="line">Accessibility settings for national police training that nobody could opt out of, and that became the organisation's standard.</p>
+        <p class="angle">I proposed them, researched them and specified them.</p></div>
+      <p class="fig"><span class="n">4</span><span class="l">named display modes, chosen by the&nbsp;user</span></p>
+    </a></li>
+    <li class="lens-public" data-craft="21" data-lead="21" data-public="3"><a href="./work/mle-evaluation.html">
+      <figure class="slot" data-r="thumb"><span class="name">Findings from the evaluation</span><img src="./images/work/mle-evaluation-card.jpg" alt="A table of usability findings against Nielsen's heuristics, each with a severity: visibility of system status, match with the real world, and user control and freedom, all rated high" width="1600" height="900" loading="lazy"></figure>
+      <div><p class="when">College of Policing, around 2010</p><h3>Evaluating the national learning platform</h3>
+        <p class="line">A usability evaluation of the platform every police officer used, run with no research budget.</p>
+        <p class="angle">I chose the method, and the findings became a funded roadmap.</p></div>
+      <p class="fig"><span class="n">10</span><span class="l">usability heuristics used as the&nbsp;standard</span></p>
     </a></li>
   </ul>
   <ul class="chips reveal" aria-label="Also in these pages">
@@ -169,6 +185,6 @@
   </div>
 </footer>
 <script src="./main.js?v=20261120"></script>
-<script src="./v5.js?v=20261120d"></script>
+<script src="./v5.js?v=20261120e"></script>
 </body>
 </html>

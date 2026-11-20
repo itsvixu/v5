@@ -3,6 +3,28 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
+  /* 0. Public lens: lead with the public service evidence (quotes and logos) before anything is measured */
+  (function () {
+    if (document.body.getAttribute('data-lens') !== 'public') return;
+    var qs = document.querySelector('#said .quotes');
+    if (qs) {
+      ['distilling complex information', 'brought design and product together', 'instrumental in guiding', 'leadership in the design workshop'].reverse().forEach(function (k) {
+        var li = Array.prototype.filter.call(qs.children, function (c) { return c.textContent.indexOf(k) > -1; })[0];
+        if (li) qs.insertBefore(li, qs.firstChild);
+      });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.track'), function (track) {
+      var lists = track.querySelectorAll('ul'), first = lists[0];
+      if (!first) return;
+      ['Home Office', 'College of Policing'].forEach(function (alt) {
+        var idx = -1;
+        Array.prototype.forEach.call(first.children, function (c, n) { var im = c.querySelector('img'); if (im && im.getAttribute('alt') === alt) idx = n; });
+        if (idx < 1) return;
+        Array.prototype.forEach.call(lists, function (ul) { ul.insertBefore(ul.children[idx], ul.firstChild); });
+      });
+    });
+  })();
+
   /* 1. Hero: icons orbit the head, driven by scroll */
   (function () {
     var o = document.querySelector('.orbit');

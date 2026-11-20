@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing for everyone | Vik Tailor</title>
+  <meta name="description" content="Vik Tailor proposed, researched and specified the accessibility settings that became the standard for national police e-learning, for an audience that had no choice about using it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=20261120z">
+</head>
+<body data-lens="craft" data-case="inclusive-design">
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');var fc=(p.get('ref')||'').toLowerCase()==='fundingcircle';try{if(!p.get('lens')&&fc&&s)s.setItem('vixu-lens','lead')}catch(e){}d.setAttribute('data-lens',pick('lens',['craft','lead','public'],fc?'lead':'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="review-bar" role="status"></div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">VIXU<span>Vik Tailor</span></a><a class="back-btn" href="../index.html#work"><span aria-hidden="true">←</span> All work</a>
+    <nav aria-label="Primary"><ul><li><a href="../index.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap case-head"><a class="back" href="../index.html#work"><span aria-hidden="true">←</span> All work</a><p class="when">College of Policing, then NCALT, 2010 to 2011</p><h1>Designing for everyone</h1><p class="lede">I proposed, researched and specified the accessibility settings that became the organisation's standard for national police training.</p><dl class="facts"><div><dt>My role</dt><dd>Instructional Designer, then Producer.</dd></div><div><dt>Audience</dt><dd>Every police officer and member of police staff in the country, plus fire and ambulance colleagues. Several hundred thousand people, and none of them had a choice about doing the training.</dd></div><div><dt>What shipped</dt><dd>Four display modes, chosen by the user and remembered across the module. They became the baseline for every module the organisation produced afterwards.</dd></div><div><dt>A note on age</dt><dd>This is earlier work. Some work in this period needed SC clearance and is described here, not shown.</dd></div></dl></div><div class="wrap case-body"><nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#challenge">The challenge</a></li><li><a href="#built">What I built</a></li><li><a href="#demo">The settings, rebuilt</a></li><li><a href="#first-run">Explaining it first</a></li><li><a href="#learned">What it taught me</a></li></ol></nav><div class="case-main"><section id="challenge" data-nav="The challenge">
+  <h2>The challenge</h2>
+  <p>Most accessibility work starts as a compliance obligation. This started with a question nobody had asked. What happens to the officer who can't comfortably read the screen, when the training is mandatory and their progress is tracked by name?</p>
+  <p>Some modules already had basic colour blindness settings. I extended those while working on training that needed SC clearance, then proposed a much fuller set for the London 2012 programme, built through 2011. It was the largest mandatory audience the organisation had ever addressed. I researched the approach myself and used the best public examples I could find, the BBC's accessibility work in particular, to win support for something nobody had budgeted for.</p>
+  <p>The audience had not chosen this training and could not skip it. They were completing it on locked-down public sector hardware between shifts, and digital confidence varied enormously. Many were learning online for the first time, having done the same training in a room with colleagues. When someone has no choice about using a service, every design decision decides whether they can take part at all.</p>
+</section>
+
+<section id="built" data-nav="What I built">
+  <h2>What I built</h2>
+  <article class="decision">
+    <h3>Named display modes</h3>
+    <dl>
+      <div><dt>The problem</dt><dd>A row of anonymous colour swatches asks people to work out which one is for them.</dd></div>
+      <div><dt>Chose</dt><dd>Four named modes that could be selected at any point: Default, High Contrast, Dyslexia and Colour Blindness. They were explained on first run and not buried in a menu.</dd></div>
+      <div><dt>Result</dt><dd>The organisation adopted them as its standard. A named mode tells people they were thought about.</dd></div>
+    </dl>
+  </article>
+  <p>Alongside the display settings, every video and animation was captioned and every script could be downloaded and printed. That last decision is the one I'm most pleased with. Someone who couldn't or wouldn't work on screen still had a complete route through the material.</p>
+  <figure class="slot" data-r="wide"><span class="name">Accessibility settings</span><img src="../images/work/london-2012-settings.jpg" alt="The settings panel in a 2011 training module, offering four selectable colour and contrast schemes with a reset control" width="560" height="360" loading="lazy" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+</section>
+
+<section id="demo" data-nav="The settings, rebuilt">
+  <h2>The settings, rebuilt</h2>
+  <p>This is a working reconstruction of the 2011 control. Switch between the four modes and the sample content changes. The Dyslexia mode adjusts letter spacing, word spacing and line height, and not only colour.</p>
+  <div class="a11y-rec">
+    <fieldset class="a11y-rec__fs">
+      <legend class="a11y-rec__legend">Settings: choose a display mode</legend>
+      <input class="a11y-rec__in" type="radio" name="a11yrec" id="a11yrec-a" checked>
+      <input class="a11y-rec__in" type="radio" name="a11yrec" id="a11yrec-b">
+      <input class="a11y-rec__in" type="radio" name="a11yrec" id="a11yrec-c">
+      <input class="a11y-rec__in" type="radio" name="a11yrec" id="a11yrec-d">
+      <div class="a11y-rec__stage">
+        <h3>Responsibilities inside and outside venues</h3>
+        <p>Depending upon your role at the Games you may be located inside or outside a venue. This module explains what is expected of you in each case, and where to go for further guidance.</p>
+        <p>You can change these display settings at any time. Your choice is remembered for the rest of the module.</p>
+        <span class="a11y-rec__tag">Page 6 of 25</span>
+      </div>
+      <div class="a11y-rec__bar">
+        <label for="a11yrec-a">Default</label>
+        <label for="a11yrec-b">High Contrast</label>
+        <label for="a11yrec-c">Dyslexia</label>
+        <label for="a11yrec-d">Colour Blindness</label>
+      </div>
+    </fieldset>
+  </div>
+  <p class="note">A reconstruction I built for this portfolio. The sample copy is indicative. The original was built in 2011, ran in Flash and has long been retired.</p>
+</section>
+
+<section id="first-run" data-nav="Explaining it first">
+  <h2>Explaining it before they needed it</h2>
+  <p>A setting nobody finds might as well not exist. The modules opened with a short overlay showing where the control lived and what it did. A "show help at start" checkbox let anyone who didn't need it again turn it off. Telling people once that the option exists, without forcing it on them every time, decided whether the rest of it mattered.</p>
+  <figure class="slot" data-r="wide"><span class="name">First-run help</span><img src="../images/work/inclusive-first-run-help.jpg" alt="The first-run help overlay naming the four display modes and showing where the settings control sits" width="560" height="360" loading="lazy" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+</section>
+
+<section id="learned" data-nav="What it taught me">
+  <h2>What it taught me</h2>
+  <p>We went beyond the legal minimum on purpose, and the payoff wasn't compliance. Our richest and most specific feedback came from police staff with access needs, often people completing the training with a colleague sitting beside them and helping.</p>
+  <p>I didn't have the vocabulary then, but that is assisted digital. It's a real and common route through a public service, and not an edge case to tidy away. It has shaped how I've worked ever since. Designing for the person who needs the most support doesn't make the experience worse for everyone else, and it is usually the only way to find out what the service really asks of people.</p>
+</section>
+<aside class="snapshot" aria-label="About this page"><h2>This is a snapshot</h2><p>I keep a fuller version of this case study for interviews. Where I can't show the original screens, because I no longer have the files or they're covered by non-disclosure agreements, I've used illustrative images instead.</p><p><a href="../contact.html?case=Designing%20for%20everyone" data-full-case="inclusive-design">Ask for the full case study</a></p></aside><p class="next"><a class="back" href="../index.html#work"><span aria-hidden="true">←</span> All work</a><a href="./mle-evaluation.html">Next: Evaluating the national learning platform</a></p></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Vik Tailor, VIXU Design, London. 2026.</p>
+    <p><a href="https://www.linkedin.com/in/vtailor" rel="me">LinkedIn</a></p>
+  </div>
+</footer>
+<script src="../main.js?v=20261118b"></script>
+</body>
+</html>

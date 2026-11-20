@@ -1,6 +1,6 @@
 /* ============================================================
    VIXU v3 — main.js. No libraries, no build step.
-   1. Lens      ?lens=craft (default) or ?lens=lead reorders the site
+   1. Lens      ?lens=craft (default), ?lens=lead or ?lens=public reorders the site
    2. Review    ?review=1 marks every claim still to confirm (?review=0 off)
    3. Analytics GoatCounter with ?ref=<application>, ?notrack=1 to exclude yourself
    4. Case pages: section index, contact handover
@@ -28,7 +28,7 @@
   function orderWork() {
     var list = document.querySelector('[data-orderable]');
     if (!list) return;
-    var attr = lens === 'lead' ? 'data-lead' : 'data-craft';
+    var attr = 'data-' + lens;
     var items = Array.prototype.slice.call(list.children);
     items.sort(function (a, b) { return Number(a.getAttribute(attr)) - Number(b.getAttribute(attr)); });
     items.forEach(function (li, i) {
