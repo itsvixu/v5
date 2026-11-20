@@ -420,7 +420,7 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 .rec-grid { list-style: none; margin: 0; padding: 0; max-width: none; columns: 2 320px; column-gap: 18px; }
 .rec-grid .quote { flex: none; width: auto; break-inside: avoid; margin: 0 0 18px; display: flex; }
 .rec-grid .quote blockquote p { font-size: 1.1rem; }
-.qs-on .quotes-more .quote { position: static; opacity: 1; pointer-events: auto; width: auto; background: var(--frame); border: 1px solid var(--line); border-top: 6px solid var(--green); padding: 26px; transition: none; }
+.qs-on .quotes-more .quote { grid-area: auto; align-self: auto; position: static; opacity: 1; pointer-events: auto; width: auto; background: var(--frame); border: 1px solid var(--line); border-top: 6px solid var(--green); padding: 26px; transition: none; }
 .qs-on .quotes-more .quote blockquote p { font-size: 1.1rem; line-height: 1.4; letter-spacing: -.01em; max-width: none; }
 .qs-on .quotes-more .quote blockquote p::before, .qs-on .quotes-more .quote blockquote p::after { color: inherit; }
 .qs-on .quotes-more .quote .who { margin-top: 0; font-size: .95rem; }
