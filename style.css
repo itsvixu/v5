@@ -573,3 +573,8 @@ html, body { overflow-x: clip; }
 /* empty image slots stay out of sight until the image is added; ?review=1 shows them */
 body:not([data-review]) .slot:has(> .hole) { display: none; }
 body:not([data-review]) .slots:not(:has(.slot img)) { display: none; }
+
+/* Before and after pairs: both images in a pair share one box */
+.pair .slot img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center; }
+.pair .slot { display: flex; flex-direction: column; }
+.pair .slot .name { flex: 1; }
