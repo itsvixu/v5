@@ -76,6 +76,10 @@
     var h = window.location.hostname;
     return window.location.protocol === 'file:' || h === 'localhost' || h === '127.0.0.1' || h === '';
   }
+  function isLiveSite() {
+    var h = window.location.hostname.toLowerCase();
+    return h === 'vixu.co.uk' || h === 'www.vixu.co.uk';
+  }
   function sendCount(vars) {
     if (analyticsReady && window.goatcounter && typeof window.goatcounter.count === 'function') {
       try { window.goatcounter.count(vars); } catch (err) { /* never break the page */ }
@@ -87,7 +91,7 @@
     if (appRef) sendCount({ path: 'app/' + appRef + '/' + name, title: label + ' (' + appRef + ')', event: true });
   }
   function initAnalytics() {
-    if (!GOATCOUNTER_CODE || isLocal() || trackingOptedOut()) return;
+    if (!GOATCOUNTER_CODE || isLocal() || !isLiveSite() || trackingOptedOut()) return;
     analyticsEnabled = true;
     var session = safeStorage('sessionStorage');
     var urlRef = cleanRef(readParam('ref'));
