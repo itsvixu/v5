@@ -317,8 +317,8 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 .tool p { margin: 0; font-size: 0.95rem; line-height: 1.45; color: var(--ink-2); }
 
 /* quotes */
-.said-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; }
-.said-head h2 { margin: 0; font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.said-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 0.5em; font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.said-head h2 { margin: 0; font-size: 1em; }
 .arrows { display: flex; gap: 8px; }
 .arrow { font: inherit; font-size: 1.2rem; width: 46px; height: 46px; border: 2px solid var(--green); background: var(--frame); color: var(--green); cursor: pointer; transition: background .18s ease, color .18s ease; }
 .arrow:hover, .arrow:focus-visible { background: var(--green); color: #fff; }
