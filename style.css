@@ -482,3 +482,8 @@ html, body { overflow-x: clip; }
 .work:not(.lab) a:hover .slot img { transform: scale(1.03); }
 @media (min-width: 1000px) { .work li.lead-row .slot img { height: 100%; aspect-ratio: auto; min-height: 320px; border-bottom: 0; border-right: 1px solid var(--line); } }
 @media (prefers-reduced-motion: reduce) { .work .slot img { transition: none; } }
+
+/* Looping video on a home card, with the poster as the fallback */
+.work .slot.has-video { position: relative; }
+.work .slot.has-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+@media (prefers-reduced-motion: reduce) { .work .slot.has-video video { display: none; } }
