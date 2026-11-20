@@ -332,6 +332,8 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 
 .closing h2 { font-size: clamp(3rem, 9vw, 6rem); letter-spacing: -0.04em; font-weight: 800; }
 .closing .intro { max-width: 56ch; }
+.closing h2 { margin-bottom: 20px; }
+@media (max-width: 699px) { .closing h2 { margin-bottom: 14px; } }
 
 /* scroll reveal: only when JS is running, so no-JS readers see everything */
 .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 70ms); }
