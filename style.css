@@ -455,7 +455,7 @@ html, body { overflow-x: clip; }
 .logo img.raw { filter: grayscale(1) contrast(1.1); opacity: .8; }
 
 /* phones: the carousel and the link are enough, no wall of cards */
-@media (max-width: 699px) { .qs-on .quotes-more { display: none; } .qmore-link { margin-top: 8px; } }
+@media (max-width: 699px) { .qs-on .quotes-more { display: none; } .qmore-link { margin-top: 40px; } }
 
 /* ===== Lab page ===== */
 .work.lab { display: grid; gap: 22px; }
