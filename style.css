@@ -332,7 +332,8 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 
 .closing h2 { font-size: clamp(3rem, 9vw, 6rem); letter-spacing: -0.04em; font-weight: 800; }
 .closing .intro { max-width: 56ch; }
-.closing h2 { margin-bottom: 20px; }
+.closing h2 { margin-bottom: 20px; margin-left: -0.055em; } /* optical: pull the L's side bearing back to the text edge */
+.hero2 h1 { margin-left: -0.03em; }
 @media (max-width: 699px) { .closing h2 { margin-bottom: 14px; } }
 
 /* scroll reveal: only when JS is running, so no-JS readers see everything */
