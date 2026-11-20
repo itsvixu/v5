@@ -565,3 +565,6 @@ html, body { overflow-x: clip; }
   .heur th, .heur td { border: 0; padding: 2px 0; }
   .heur td:last-child { margin-top: 6px; }
 }
+
+/* cards whose screenshot must show all four edges */
+.work:not(.lab) .slot img.whole { object-fit: contain; object-position: center; background: #000; }
