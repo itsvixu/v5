@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=20261118b">
+  <link rel="stylesheet" href="./style.css?v=20261120s">
 </head>
 <body data-lens="craft">
-<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');d.setAttribute('data-lens',pick('lens',['craft','lead'],'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');try{if(!p.get('lens')&&(p.get('ref')||'').toLowerCase()==='fundingcircle'&&s)s.setItem('vixu-lens','lead')}catch(e){}d.setAttribute('data-lens',pick('lens',['craft','lead'],(p.get('ref')||'').toLowerCase()==='fundingcircle'?'lead':'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"></div>
 <div class="review-bar" role="status"></div>
@@ -22,21 +22,26 @@
   </div>
 </header>
 <main id="main">
-<section class="wrap case-head">
+<section class="wrap case-head about-intro">
+  <div class="about-intro-text">
   <h1>About</h1>
   <p class="lede lens-craft">I'm a product design lead in London with a degree grounded in human-computer interaction. I've designed digital products for over 20 years, the last ten on checkout, credit cards and loyalty, and I stay hands-on.</p>
   <p class="lede lens-lead">I'm a product design lead in London with a degree grounded in human-computer interaction. I've designed digital products for over 20 years, the last ten leading design on checkout, credit cards and loyalty, and I stay close to the work.</p>
+  </div>
+  <figure class="portrait about-photo">
+    <img src="./images/vik-switzerland.jpg" alt="Vik Tailor in a cap and rucksack, looking across a snow-covered Swiss valley towards the mountains" width="1000" height="1328">
+  </figure>
 </section>
 
 <section class="wrap band">
   <h2>How I work</h2>
   <p>I start from evidence. That means research on the way in and a test on the way out, and I take the results as they come. Some of the most useful tests I have designed were the ones that lost.</p>
-  <p>I am careful with numbers. On this site every figure says whether it was measured, modelled or projected, and who did the measuring.</p>
-  <p>I build to think. I use AI and code to get a concept working, because a working thing settles arguments that a deck cannot.</p>
+  <p>I spent several years in test readouts at Hotels.com, deciding what the design did next. Our analysts ran the numbers and the design calls were mine. Booking form tests could have over a million purchasers in them, so I looked at the segments and the guardrails before I trusted the headline lift. The credit card tests ran on far less traffic, and one of them finished without reaching its stopping rules. I had to be comfortable saying we didn't know yet, and plan the next test from there.</p>
+  <p>I like to build things to find out whether an idea works. I use AI and code to get a concept running, then I show people the working version and see what they make of it. This year that has meant the <a href="./lab.html">Lab projects</a> and the work on <a href="./work/building-with-ai.html">Building with AI</a>.</p>
   <p class="lens-lead">I lead by setting a clear standard and then giving people room. I would sooner hand someone a real piece of work to own than a development plan.</p>
-  <figure class="portrait about-photo">
-    <div class="ph" aria-hidden="true"><span>VT</span><small>Photo to add: images/vik.jpg</small></div>
-    <img src="./images/vik.jpg" alt="Vik Tailor" width="640" height="800" onerror="this.remove()">
+  <figure class="about-wide">
+    <img src="./images/work/how-i-work-whiteboard.jpg" alt="Vik pointing at a whiteboard covered with Hotels.com booking screens and handwritten notes, talking with a colleague who is holding a laptop" width="1280" height="720" loading="lazy">
+    <figcaption><span class="cf" data-note="Confirm the year and the topic of this session before publishing.">At the whiteboard on a booking flow at Hotels.com.</span></figcaption>
   </figure>
 </section>
 

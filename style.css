@@ -493,3 +493,12 @@ html, body { overflow-x: clip; }
 
 /* Mobile: the pinned quote hugs its content, no empty screen above and below */
 @media (max-width: 699px) { .qpin { height: auto; justify-content: flex-start; top: max(62px, calc(50vh - 200px)); } }
+
+/* About: intro with portrait, wide whiteboard photo */
+.about-intro { display: grid; gap: 36px; align-items: center; }
+.about-intro .about-photo { max-width: 300px; margin: 0; justify-self: start; }
+.about-intro .about-photo img { object-position: 72% 50%; }
+@media (min-width: 900px) { .about-intro { grid-template-columns: minmax(0, 1fr) 340px; gap: 64px; } .about-intro .about-photo { justify-self: end; max-width: 340px; } }
+.about-wide { margin: 40px 0 0; max-width: 880px; }
+.about-wide img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.about-wide figcaption { margin-top: 10px; font-size: .9rem; color: var(--ink-2); max-width: 60ch; }
