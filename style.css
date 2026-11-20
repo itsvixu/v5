@@ -385,10 +385,10 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 .qs-on .said-head .arrows { display: none; }
 .qstage { position: relative; height: calc(100vh * (var(--n, 4) * .75 + 1)); }
 .qpin { position: sticky; top: 62px; height: calc(100vh - 62px); display: flex; flex-direction: column; justify-content: center; gap: 26px; }
-.qs-on .quotes { display: block; position: relative; overflow: visible; margin: 0; padding: 0; scroll-snap-type: none; height: min(60vh, 520px); max-width: none; }
-.qs-on .quote { position: absolute; top: 0; left: 0; width: 100%; flex: none; opacity: 0; pointer-events: none; background: none; border: 0; padding: 0; gap: 0; transition: opacity .15s ease; }
+.qs-on .quotes { display: block; position: relative; overflow: visible; margin: 0; padding: 0; scroll-snap-type: none; height: auto; max-width: none; display: grid; }
+.qs-on .quote { grid-area: 1 / 1; align-self: start; position: static; width: 100%; flex: none; opacity: 0; pointer-events: none; background: none; border: 0; padding: 0; gap: 0; transition: opacity .15s ease; }
 .qs-on .quote.on { opacity: 1; pointer-events: auto; }
-.qs-on .quote blockquote p { font-size: clamp(1.55rem, 3.4vw, 3rem); line-height: 1.2; letter-spacing: -.02em; max-width: 30ch; }
+.qs-on .quote blockquote p { font-size: clamp(1.35rem, min(3.4vw, 4.6vh), 3rem); line-height: 1.2; letter-spacing: -.02em; max-width: 30ch; text-wrap: pretty; }
 .qs-on .quote blockquote p::before, .qs-on .quote blockquote p::after { color: var(--green); }
 .qs-on .quote .who { margin-top: 26px; font-size: 1.05rem; }
 .qs-on .quote .w { transition: color .12s linear; color: #8A9690; }
