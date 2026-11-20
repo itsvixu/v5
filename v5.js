@@ -102,13 +102,15 @@
     });
     var sum = data.reduce(function (a, d) { return a + d.seg; }, 0), cum = [], run = 0;
     data.forEach(function (d) { run += d.seg; cum.push(run / sum); });
-    stage.style.height = ((sum + 1) * 100) + 'vh';
+    var pinEl = stage.querySelector('.qpin');
+    function size() { var ph = pinEl ? pinEl.offsetHeight : window.innerHeight; stage.style.height = (sum * window.innerHeight + ph) + 'px'; }
+    size();
     var qn = bar.querySelector('.qn'), fillEl = bar.querySelector('i'), ticking = false;
     function mix(v) { return 'rgb(' + Math.round(138 - 118 * v) + ',' + Math.round(150 - 114 * v) + ',' + Math.round(144 - 114 * v) + ')'; }
     function update() {
       ticking = false;
-      var r = stage.getBoundingClientRect(), total = stage.offsetHeight - window.innerHeight;
-      var s = clamp((62 - r.top) / total, 0, 1), qi = 0;
+      var r = stage.getBoundingClientRect(), total = stage.offsetHeight - (pinEl ? pinEl.offsetHeight : window.innerHeight);
+      var s = clamp(((pinEl ? parseFloat(getComputedStyle(pinEl).top) || 62 : 62) - r.top) / total, 0, 1), qi = 0;
       while (qi < N - 1 && s >= cum[qi]) qi++;
       var lo = qi ? cum[qi - 1] : 0, t = clamp((s - lo) / (cum[qi] - lo), 0, 1), fill = clamp(t / 0.8, 0, 1);
       data.forEach(function (d, i) {
@@ -119,7 +121,7 @@
     }
     function kick() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
     window.addEventListener('scroll', kick, { passive: true });
-    window.addEventListener('resize', kick);
+    window.addEventListener('resize', function () { size(); kick(); });
     update();
   })();
 })();

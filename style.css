@@ -490,3 +490,6 @@ html, body { overflow-x: clip; }
 
 /* Tall crest-style logos get extra height so they read at the same weight */
 .logo img.tall { height: 40px; }
+
+/* Mobile: the pinned quote hugs its content, no empty screen above and below */
+@media (max-width: 699px) { .qpin { height: auto; justify-content: flex-start; top: max(62px, calc(50vh - 200px)); } }
