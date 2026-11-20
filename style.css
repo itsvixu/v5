@@ -487,3 +487,6 @@ html, body { overflow-x: clip; }
 .work .slot.has-video { position: relative; }
 .work .slot.has-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 @media (prefers-reduced-motion: reduce) { .work .slot.has-video video { display: none; } }
+
+/* Tall crest-style logos get extra height so they read at the same weight */
+.logo img.tall { height: 40px; }
