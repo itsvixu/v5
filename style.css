@@ -72,7 +72,7 @@ body[data-lens="lead"] .lens-craft { display: none !important; }
 
 .fig { margin: 0; }
 .fig .n { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 3.6vw, 2.7rem); letter-spacing: -0.02em; line-height: 1; display: block; font-variant-numeric: tabular-nums; }
-.fig .l { display: block; margin-top: 8px; font-size: 0.95rem; line-height: 1.4; color: var(--ink-2); max-width: 30ch; }
+.fig .l { display: block; margin-top: 8px; font-size: 0.95rem; line-height: 1.4; color: var(--ink-2); max-width: 30ch; text-wrap: balance; }
 .figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 28px 32px; margin: 28px 0; padding: 26px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
 
 /* ---------- Section heads ---------- */
