@@ -448,7 +448,12 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 
 /* orbit: contain on narrow screens */
 .hero2 { overflow-x: clip; }
-@media (max-width: 899px) { .orbit-icons { font-size: 8.5px; } .portrait.orbit { margin-top: 18px; } }
+@media (max-width: 899px) {
+  .orbit-icons { font-size: 7.5px; } .portrait.orbit { margin-top: 18px; }
+  .pc-field { min-width: 0; padding: .5em .7em; }
+  .pc-pay { padding: .65em 1.1em; }
+  .pc-stars { padding: .5em .7em; letter-spacing: .1em; }
+}
 html, body { overflow-x: clip; }
 
 /* logos that cannot be flattened to one colour (raster or boxed): grey instead */

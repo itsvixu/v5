@@ -10,10 +10,21 @@
     var icons = Array.prototype.slice.call(o.querySelectorAll('.oi'));
     var n = icons.length, small = window.matchMedia('(max-width: 899px)').matches, k = small ? 0.6 : 0.3;
     var cur = window.scrollY * k, running = false, start = performance.now(), INTRO = 3200;
+    /* phones: keep every icon inside the headshot column, so wide icons orbit on a tighter ring */
+    var rad = [];
+    function measure() {
+      var cw = o.clientWidth || 1;
+      icons.forEach(function (el, i) {
+        rad[i] = window.matchMedia('(max-width: 899px)').matches ? Math.max(50 - (el.offsetWidth / 2 * 1.05) / cw * 100, 6) : 50;
+      });
+    }
+    measure();
+    window.addEventListener('resize', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
     function place(spin) {
       icons.forEach(function (el, i) {
         var a = (i * 360 / n - 90 + spin) * Math.PI / 180, s = Math.sin(a), c = Math.cos(a), d = (s + 1) / 2;
-        el.style.left = (50 + 50 * c) + '%';
+        el.style.left = (50 + rad[i] * c) + '%';
         el.style.top = (15 + 10 * s) + '%';
         el.style.transform = 'translate(-50%,-50%) scale(' + (0.8 + 0.25 * d).toFixed(3) + ')';
         el.style.zIndex = s > 0 ? 3 : 0;
