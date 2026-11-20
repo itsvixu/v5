@@ -19,7 +19,7 @@ sapient-nitro.svg
 buck.svg
 wolff-olins.svg
 karmarama.svg
-the-calling.svg
+the-clearing.svg
 visa.svg
 mastercard.svg
 klarna.svg
