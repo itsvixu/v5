@@ -40,3 +40,8 @@ To confirm
 - Old v2 links keep working: `public-service.html`, `ps-contact.html` and `case-studies/*.html` are small redirect pages (query strings such as `&ref=` are carried across). Public-service redirects switch to the public lens.
 - `?ref=fundingcircle` now sets the lead lens on every page, including the home page (it was missing there).
 - Snapshot notes and the closing section no longer promise working files or labelled rebuilds. Two pages contain labelled reconstructions: the settings demo and the findings table.
+
+
+## Quote names (20 Nov 2026)
+
+Quote cards now show the giver's name above the role. Names and roles come from `Quote permissions (private).md`, which is not part of the site. Vik confirmed he has permission to use names.

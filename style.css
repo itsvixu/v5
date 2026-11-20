@@ -411,6 +411,7 @@ body[data-review] .cf::after { content: " [confirm: " attr(data-note) "]"; font-
 .marquee-label { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--ink); margin-bottom: 12px; }
 
 /* ===== v5: quotes, source label, wall, all-recommendations page ===== */
+.quote .who strong { display: block; color: var(--ink); font-weight: 700; }
 .quote .src { display: block; margin-top: 2px; font-size: .85rem; color: var(--ink-2); opacity: .85; }
 .qbarrow { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .qskip { font-size: .95rem; color: var(--green); text-underline-offset: 3px; }
