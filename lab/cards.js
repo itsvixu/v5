@@ -11,7 +11,7 @@ window.LAB_CARDS.push({
   line: 'A scanner that reads competitor credit card offers twice a week, and a dashboard that shows what changed next to a screenshot of the page.',
   // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
   angle: {
-    craft: 'What I make now: a scanner, and the dashboard I designed around it, built with Claude Code.',
+    craft: 'A scanner, and the dashboard I designed around it, built with Claude Code.',
     lead: 'Where I kept people in the loop on a system that reads competitor offers.'
   },
   thumb: '../images/card-offer-intelligence/thumb.jpg',
@@ -33,7 +33,7 @@ window.LAB_CARDS.push({
   line: 'Twelve interactive stories about UK garden wildlife for primary school children. Each one has a scroll-driven reveal and ends with a quiz and a badge.',
   // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
   angle: {
-    craft: 'What I make now: a set of illustrated, animated stories for children, built with Claude Code and Cowork.',
+    craft: 'A set of illustrated, animated stories for children, built with Claude Code and Cowork.',
     lead: 'How I took one idea to a reusable format and tested it with children before showing it to a school.'
   },
   thumb: '../images/uk-garden-creatures/thumb.jpg?v=2',
@@ -50,12 +50,12 @@ window.LAB_CARDS.push({
   line: 'One level of a story game for children aged 9 to 11, built around Hindu stories and a short set of rules for how the gods appear.',
   // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
   angle: {
-    craft: 'What I make now: a game for children, with original artwork drawn in layers that scroll at different speeds.',
-    lead: 'Where I wrote down the rules for treating sacred stories with care, and sent every picture and sentence to an advisor before showing it to children.'
+    craft: 'A game for children, with original artwork drawn in layers that scroll at different speeds.',
+    lead: 'Where I wrote down the rules for treating sacred stories with care, and set up a review sheet so an advisor can check every picture and sentence before children see it.'
   },
   thumb: '../images/ranis-dream/thumb.jpg',
   thumbAlt: 'Rani, a girl with a long golden scarf, standing on a path at dusk beside a river, with temple silhouettes, floating lamps, a large moon and a tangle of vines ahead',
-  status: 'Private prototype',
+  status: 'Prototype',
   updated: '2026-11-17'
 });
 
@@ -67,7 +67,7 @@ window.LAB_CARDS.push({
   line: 'A scrolling story for phones. Enter a birth date and it works out your zodiac animal and element from the real Lunar New Year date, then gives you a card to share.',
   // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
   angle: {
-    craft: 'What I make now: a mobile story with animated line drawings that trace themselves on, made for in-app browsers.',
+    craft: 'A mobile story with animated line drawings that trace themselves on, made for in-app browsers.',
     lead: 'How I settled the rules first, such as when the zodiac year starts and what the card is allowed to share, and wrote down what is left before launch.'
   },
   thumb: '../images/chinese-zodiac/thumb.jpg',
