@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chinese Zodiac | Vik Tailor</title>
+  <meta name="description" content="A mobile-first scrolling story that works out your Chinese zodiac sign from the real Lunar New Year date, then lets you share a card and check compatibility with a friend. A prototype by Vik Tailor, 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=20261121e">
+</head>
+<body data-lens="craft" data-case="chinese-zodiac">
+<script>(function(){var d=document.body,p,s;try{p=new URLSearchParams(location.search)}catch(e){p={get:function(){return null}}}try{s=window.sessionStorage}catch(e){s=null}function pick(k,ok,def){var v=(p.get(k)||'').toLowerCase();if(ok.indexOf(v)<0){v=null;try{v=s&&s.getItem('vixu-'+k)}catch(e){}}else{try{s&&s.setItem('vixu-'+k,v)}catch(e){}}return ok.indexOf(v)<0?def:v}d.classList.add('js');var fc=(p.get('ref')||'').toLowerCase()==='fundingcircle';try{if(!p.get('lens')&&fc&&s)s.setItem('vixu-lens','lead')}catch(e){}d.setAttribute('data-lens',pick('lens',['craft','lead','public'],fc?'lead':'craft'));if(pick('review',['1','0'],'0')==='1')d.setAttribute('data-review','')})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="review-bar" role="status"></div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">VIXU<span>Vik Tailor</span></a><a class="back-btn" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a>
+    <nav aria-label="Primary"><ul><li><a href="../index.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap case-head"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a><p class="when">VIXU Design, 2026</p><h1>Chinese Zodiac</h1><p class="lede">A mobile-first scrolling story. You enter a birth date, and it gives you your Chinese zodiac animal and element based on the real Lunar New Year date for that year. Then you can save a card and check how you match with a friend. It is a working prototype that is not live yet.</p><dl class="facts"><div><dt>My role</dt><dd>I designed the site and directed the build.</dd></div><div><dt>What I did myself</dt><dd>The design, the rules for working out a sign, and the decisions below.</dd></div><div><dt>What others owned</dt><dd>Nobody else has reviewed the copy or the drawings yet. That is on the list below.</dd></div><div><dt>Status</dt><dd>A working prototype that is not live yet. The target is to launch before Lunar New Year on 6 February 2027.</dd></div></dl></div><div class="wrap case-body"><nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#problem">The problem</a></li><li><a href="#look">What it looks like</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#results">Results</a></li><li><a href="#wrong">What went wrong</a></li><li><a href="#change">What is left</a></li></ol></nav><div class="case-main">
+<section id="problem" data-nav="The problem">
+  <h2>The problem</h2>
+  <p>The Chinese zodiac year begins at Lunar New Year, not on 1 January, and the date moves from year to year. Someone born on 20 January 1948 is a Fire Pig, because the lunar year was still 1947. An Earth Rat would be the wrong answer.</p>
+  <p>This is a mobile-first scrolling story. You enter a birth date and it gives you your animal and element, based on the real Lunar New Year date for that year. You then scroll through a few short chapters, save a card to share, and check how you match with a friend. It is built for the in-app browsers in Instagram and TikTok.</p>
+</section>
+
+<section id="look" data-nav="What it looks like">
+  <h2>What it looks like</h2>
+  <div class="slots">
+    <figure class="slot" data-r="phone"><span class="name">The first screen</span><img src="../images/chinese-zodiac/landing.jpg" alt="The first screen of the Chinese zodiac site on a phone, with a place to enter a date of birth" width="780" height="1560" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <figure class="slot" data-r="phone"><span class="name">The reveal for a birth date in 1980</span><img src="../images/chinese-zodiac/reveal.jpg" alt="The reveal screen for a birth date in 1980: a gold line drawing of a monkey inside a ring of the twelve animals in Chinese characters, with the words Metal Monkey beneath" width="780" height="1560" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+    <figure class="slot" data-r="phone"><span class="name">The card to share</span><img src="../images/chinese-zodiac/share-card.jpg" alt="A card to save and share, showing a gold line drawing of a monkey, the words Metal Monkey, the word Inventive and a red seal with the character for monkey" width="780" height="1560" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+  </div>
+  <p>Each animal is drawn as gold lines that trace themselves on, like a constellation being joined up, and then move gently. They are plain vector shapes animated with CSS, so they stay sharp and light in an in-app browser.</p>
+  <figure class="slot" data-r="wide"><span class="name">The review sheet of all twelve signs</span><img src="../images/chinese-zodiac/twelve-signs.jpg" alt="The review sheet showing the first drawings in the set of twelve: a rat, an ox, a tiger and a rabbit, each as a gold line drawing in a circle" width="1280" height="900" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>
+</section>
+
+<section id="decisions" data-nav="Decisions">
+  <h2>Decisions</h2>
+
+  <article class="decision">
+    <h3>Change sign on Lunar New Year</h3>
+    <dl><div><dt>Considered</dt><dd>Changing sign at Lichun, around 4 February, which some traditions do.</dd></div><div><dt>Chose</dt><dd>The sign changes on Lunar New Year, using a table of the published dates from 1900 to 2043.</dd></div><div><dt>Why</dt><dd>Someone born on 20 January 1948 is a Fire Pig, from lunar year 1947, and not an Earth Rat. The project says which rule it follows.</dd></div></dl>
+  </article>
+
+  <article class="decision">
+    <h3>One share button</h3>
+    <dl><div><dt>Considered</dt><dd>Buttons for Instagram, WhatsApp and Facebook.</dd></div><div><dt>Chose</dt><dd>One button that opens the phone's own share menu and passes the card as an image. Where the menu is not available, as in some in-app browsers, the page shows three steps for saving the card and adding it from Photos.</dd></div><div><dt>Why</dt><dd>A web page cannot hand an image to those apps directly, so a brand button could only share a link, and the card is the thing people want to share.</dd></div></dl>
+  </article>
+
+  <article class="decision">
+    <h3>Keep the birth date in the browser</h3>
+    <dl><div><dt>Chose</dt><dd>The date is read in the browser, used in memory and discarded when the tab closes. Nothing is stored, there are no cookies or analytics, and the date is never put in the address. The page's security policy blocks scripts from sending data anywhere. The card carries the sign, the element and one trait, and nothing else.</dd></div></dl>
+  </article>
+
+  <article class="decision">
+    <h3>Compatibility for fun</h3>
+    <dl><div><dt>Chose</dt><dd>The match uses the traditional pairings, which are the six harmonies, the four trines, the six clashes and the six harms, and the five-element cycles adjust the score. The page says it is for fun.</dd></div></dl>
+  </article>
+
+  <article class="decision">
+    <h3>Two ways to draw the signs</h3>
+    <dl><div><dt>Considered</dt><dd>Paper-cut, which means flat red and gold shapes after the paper cuttings hung in windows at New Year. The concept sheet recommended it for shareability, because bold shapes hold up on a card and at thumbnail size.</dd></div><div><dt>Chose</dt><dd>Star-line, the constellation-style gold line drawings. All twelve signs are drawn in that style.</dd></div></dl>
+<figure class="slot" data-r="wide"><span class="name">The concept sheet with the two directions for the Monkey and the Rooster</span><img src="../images/chinese-zodiac/directions.jpg" alt="The concept sheet comparing two directions for the same Monkey and Rooster, starting with star-line gold line drawings" width="1280" height="900" style="display:block;width:100%;height:auto;border:1px solid var(--line)"></figure>  </article>
+
+</section>
+
+<section id="results" data-nav="Results">
+  <h2>Results</h2>
+  <div class="figs">
+    <p class="fig"><span class="n">12</span><span class="l">signs drawn, with a review sheet for the whole set</span></p>
+    <p class="fig"><span class="n">1901 to 2043</span><span class="l">the birth years it works for, from a table of published Lunar New Year dates</span></p>
+    <p class="fig"><span class="n">0</span><span class="l">dependencies and no build step</span></p>
+    <p class="fig"><span class="n">17 px</span><span class="l">body text, with nothing smaller than 13 px</span></p>
+  </div>
+  <p>Unit tests cover the date table and the sign, element and compatibility logic. I worked out the text colours to meet WCAG AA at 4.5:1 against both the darkest and lightest parts of the background, and most body text meets 7:1. The body font is Atkinson Hyperlegible Next, which was designed so that letters like I, l and 1 stay distinct. Form errors name the field and move focus to it, and the animation stops for anyone who has asked their device for reduced motion. Inputs are 16 px so iOS does not zoom in when you tap one.</p>
+  <p>There are no visitor numbers because it is not live.</p>
+</section>
+
+<section id="wrong" data-nav="What went wrong">
+  <h2>What went wrong</h2>
+  <div class="miss">
+    <h3>The on-screen keyboard broke the scrolling</h3>
+    <p>Three of the first eight commits fixed problems with the on-screen keyboard on phones. Scrolling went wrong on Android when the keyboard closed, the scroll to the reveal went wrong after the keyboard closed, and the date fields could be hidden under the keyboard. The date fields now stay in view above it.</p>
+  </div>
+
+  <div class="miss">
+    <h3>Four of the first drawings needed redoing</h3>
+    <p>I redrew the horse, the goat, the dog and the pig and simplified the dragon's horns after the first pass. The whole set is still a first pass.</p>
+  </div>
+
+</section>
+
+<section id="change" data-nav="What is left">
+  <h2>What is left before launch</h2>
+  <p>The drawings need a proper review. The concept sheet itself warns that thin lines read less well at small sizes and on the share card, which is also why it recommended paper-cut.</p>
+  <p>The copy in the traits, elements and compatibility text needs to be read by someone who knows the tradition. It also needs testing on real phones inside Instagram and TikTok, on iOS and Android, and a screen reader pass on VoiceOver and TalkBack. The contrast figures are calculated and need checking with a measuring tool.</p>
+  <p>The page makes one request to a third party, which is Google Fonts, and the plan is to self-host the fonts so it makes none. It also needs a preview image, a final address and a place to host it. There is an empty slot for a "this month" chapter that has nothing in it yet.</p>
+</section>
+<aside class="snapshot" aria-label="About this page"><h2>This is a snapshot</h2><p>I keep a fuller version of this case study for interviews.</p><p><a href="../contact.html?case=Chinese%20Zodiac" data-full-case="chinese-zodiac">Ask for the full case study</a></p></aside><p class="next"><a class="back" href="../lab.html"><span aria-hidden="true">←</span> All lab projects</a><a href="./card-offer-intelligence.html">Next: Card Offer Intelligence</a></p></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Vik Tailor, VIXU Design, London. 2026.</p>
+    <p><a href="https://www.linkedin.com/in/vtailor" rel="me">LinkedIn</a></p>
+  </div>
+</footer>
+<script src="../main.js?v=20261120f"></script>
+</body>
+</html>

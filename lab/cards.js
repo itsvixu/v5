@@ -41,3 +41,40 @@ window.LAB_CARDS.push({
   status: 'In testing',
   updated: '2026-11-18'
 });
+
+window.LAB_CARDS.push({
+  slug: 'ranis-dream',
+  url: 'ranis-dream.html',
+  when: 'VIXU Design, 2026',
+  title: "Rani's Dream",
+  line: 'One level of a story game for children aged 9 to 11, built around Hindu stories and a short set of rules for how the gods appear.',
+  // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
+  angle: {
+    craft: 'What I make now: a game for children, with original artwork drawn in layers that scroll at different speeds.',
+    lead: 'Where I wrote down the rules for treating sacred stories with care, and sent every picture and sentence to an advisor before showing it to children.'
+  },
+  thumb: '../images/ranis-dream/thumb.jpg',
+  thumbAlt: 'Rani, a girl with a long golden scarf, standing on a path at dusk beside a river, with temple silhouettes, floating lamps, a large moon and a tangle of vines ahead',
+  status: 'Private prototype',
+  updated: '2026-11-17'
+});
+
+window.LAB_CARDS.push({
+  slug: 'chinese-zodiac',
+  url: 'chinese-zodiac.html',
+  when: 'VIXU Design, 2026',
+  title: 'Chinese Zodiac',
+  line: 'A scrolling story for phones. Enter a birth date and it works out your zodiac animal and element from the real Lunar New Year date, then gives you a card to share.',
+  // The two lens lines are drafts in your voice, as on the home page. Confirm or rewrite them.
+  angle: {
+    craft: 'What I make now: a mobile story with animated line drawings that trace themselves on, made for in-app browsers.',
+    lead: 'How I settled the rules first, such as when the zodiac year starts and what the card is allowed to share, and wrote down what is left before launch.'
+  },
+  thumb: '../images/chinese-zodiac/thumb.jpg',
+  thumbAlt: 'The reveal screen for a 1980 birth date: a gold line drawing of a monkey inside a ring of the twelve animals in Chinese characters',
+  status: 'Prototype, not live yet',
+  links: {
+    code: 'https://github.com/itsvixu/chzodiac'
+  },
+  updated: '2026-11-11'
+});
